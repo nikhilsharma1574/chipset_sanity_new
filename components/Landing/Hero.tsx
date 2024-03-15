@@ -4,7 +4,7 @@ import React from "react";
 import { ImagesSlider } from "../ui/images-slider";
 import { Hero } from "@/app/page";
 
-export function Hero({ images}: { images: Hero[] }) {
+export function Herolanding({ images}: { images: Hero[] }) {
     const imagearr = images[0].mainImage.map((item: { url: string }) => item.url);
   return (
     <ImagesSlider className="md:h-[40rem] h-[15rem]" images={imagearr}>

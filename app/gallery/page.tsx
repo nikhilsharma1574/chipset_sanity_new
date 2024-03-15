@@ -1,7 +1,7 @@
 import React from 'react'
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-
+import Image from 'next/image';
 function srcset(image: string, size: number, rows = 1, cols = 1) {
   return {
     src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
@@ -83,7 +83,7 @@ const page = () => {
               <ImageList className='w-full h-full' variant="quilted" cols={2} rowHeight={101} >
                 {itemData.map((item) => (
                 <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
-                  <img {...srcset(item.img, 500, item.rows, item.cols)} alt={item.title} className='rounded-xl' loading="lazy" />
+                  <Image height={100} width={100} {...srcset(item.img, 500, item.rows, item.cols)} alt={item.title} className='rounded-xl'  loading="lazy" />
                 </ImageListItem>
                 ))}
               </ImageList>
@@ -92,7 +92,7 @@ const page = () => {
                 <ImageList className='w-full h-full' variant="quilted" cols={3} rowHeight={251} >
                   {itemData.map((item) => (
                   <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
-                    <img {...srcset(item.img, 500, item.rows, item.cols)} alt={item.title} className='rounded-xl' loading="lazy" />
+                    <Image height={100} width={100} {...srcset(item.img, 500, item.rows, item.cols)} alt={item.title} className='rounded-xl' loading="lazy" />
                   </ImageListItem>
                   ))}
                 </ImageList>
@@ -101,7 +101,7 @@ const page = () => {
                 <ImageList className='w-full h-full' variant="quilted" cols={5} rowHeight={501} >
                   {itemData.map((item) => (
                   <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
-                    <img {...srcset(item.img, 500, item.rows, item.cols)} alt={item.title} className='rounded-xl' loading="lazy" />
+                    <Image height={100} width={100} {...srcset(item.img, 500, item.rows, item.cols)} alt={item.title} className='rounded-xl' loading="lazy" />
                   </ImageListItem>
                   ))}
                 </ImageList>

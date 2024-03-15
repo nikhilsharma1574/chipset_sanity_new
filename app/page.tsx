@@ -1,4 +1,4 @@
-import { Hero } from "@/components/Landing/Hero";
+import { Herolanding } from "@/components/Landing/Hero";
 import Events from "@/components/Landing/Events";
 import { sanityFetch } from "@/sanity/lib/sanityFetch";
 import Image from "next/image";
@@ -29,7 +29,7 @@ const events = await sanityFetch<Event[]>({query:eventsQuery});
   return (
     <main >
       <div className="flex min-h-screen h-full w-full flex-col items-center justify-between ">
-        <Hero images={slideshow}/>
+        <Herolanding images={slideshow}/>
         <AboutLanding/>
         <Macbook />
         <Events events={events}/>
