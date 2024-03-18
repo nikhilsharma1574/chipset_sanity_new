@@ -20,7 +20,7 @@ const AllComponents = ({slideshow,events}:{slideshow:Hero[] , events:Event[]}) =
       <div className="flex min-h-screen h-full w-full flex-col items-center justify-between ">
         <Herolanding images={slideshow}/>
         <AboutLanding/>
-        <Macbook />
+          <Macbook />
         <Events events={events}/>
       </div>
     </main>

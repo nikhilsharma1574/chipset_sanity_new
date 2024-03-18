@@ -1,12 +1,14 @@
 "use client";
 import React from "react";
+import { motion } from "framer-motion";
 import { MacbookScroll } from "../ui/macbook-scroll";
 import Link from "next/link";
+import { AuroraBackground } from "../ui/aurora-background";
 
 export function Macbook() {
     return (
-      <div className="overflow-hidden h-full dark:bg-[#0B0B0F] bg-white w-full">
-        <MacbookScroll
+      <div className="overflow-hidden h-full w-full bg-slate-100">
+    <MacbookScroll
           title={
             <span data-aos="fade-down">
               THIS IS ABOUT INOVATION<br /> AND LEARNING
