@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
 import { BackgroundBeams } from "../ui/background-beams";
+import EventCard from "../Reusable/EventCard"
 import { Event } from "@/app/page";
 
-import EventCard from "../Reusable/EventCard"
 const Events = ({events}:{ events:Event[] }) => {
   return (
     <>
@@ -20,7 +20,7 @@ const Events = ({events}:{ events:Event[] }) => {
         {
           events?.map((events) => (
               <>
-              <div>
+              <div data-aos="fade-up">
                 <EventCard events={events}/>
               </div>
               </>

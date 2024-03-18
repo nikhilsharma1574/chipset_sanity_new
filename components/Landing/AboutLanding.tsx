@@ -4,7 +4,7 @@ import React from 'react'
 const aboutLanding = () => {
   return (
     <>
-        <div className='page3 w-full p-1 md:p-6 flex flex-col'>
+        <div data-aos="fade-up" className='page3 w-full p-1 md:p-6 flex flex-col'>
           <div className='flex flex-col'>
         <div className='page2 p-4 flex flex-col'>
           <div className='flex flex-1 flex-col md:flex-row'>

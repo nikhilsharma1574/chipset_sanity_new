@@ -8,7 +8,7 @@ export function Macbook() {
       <div className="overflow-hidden h-full dark:bg-[#0B0B0F] bg-white w-full">
         <MacbookScroll
           title={
-            <span>
+            <span data-aos="fade-down">
               THIS IS ABOUT INOVATION<br /> AND LEARNING
             </span>
           }

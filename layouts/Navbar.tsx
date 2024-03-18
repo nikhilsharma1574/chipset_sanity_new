@@ -43,10 +43,10 @@ const Navbar = () => {
     },
   ]
   return (
-    <div>
-      <nav className ="backdrop-blur-sm z-50  md:w-full transition-all delay-10 h-[4rem]  sm:h-[7rem] md:h-[7rem] px-4">
+    <section id="" className="sticky top-0  z-40  backdrop-blur">
+      <nav className ="md:w-full transition-all delay-10 h-[4rem]  sm:h-[7rem] md:h-[7rem] px-4">
         <div className ="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto h-full ">
-            <Link href="/" className="flex items-center ">
+            <Link href="/" className="flex items-center  ">
               <div className='flex items-center'>
                 <Image src={logo} height={100} width={100} alt='Logo' className='w-10 sm:w-20 md:w-16 p-1'/>
               <div>
@@ -92,7 +92,7 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-    </div>
+    </section>
   )
 }
 
