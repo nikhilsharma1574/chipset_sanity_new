@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/layouts/Navbar";
 import Footer from "@/components/Reusable/Footer";
 import Script from "next/script";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {

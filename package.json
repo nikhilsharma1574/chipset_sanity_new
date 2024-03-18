@@ -17,6 +17,7 @@
     "@sanity/image-url": "^1.0.2",
     "@sanity/vision": "^3.33.0",
     "@tabler/icons-react": "^3.0.3",
+    "@vercel/speed-insights": "^1.0.10",
     "aos": "^2.3.4",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
