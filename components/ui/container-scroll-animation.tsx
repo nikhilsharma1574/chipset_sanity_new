@@ -8,9 +8,6 @@ export const ContainerScroll = ({
 }: {
   NoticeData: {
     name: string;
-    designation: string;
-    image: string;
-    badge?: string;
   }[];
   titleComponent: string | React.ReactNode;
 }) => {
@@ -78,17 +75,12 @@ export const Header = ({ translate, titleComponent }: any) => {
 export const Card = ({
   rotate,
   scale,
-  translate,
-  NoticeData,
 }: {
   rotate: any;
   scale: any;
   translate: any;
   NoticeData: {
     name: string;
-    designation: string;
-    image: string;
-    badge?: string;
   }[];
 }) => {
   return (
