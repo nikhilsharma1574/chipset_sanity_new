@@ -2,7 +2,7 @@
 import React from "react";
 import { SparklesCore } from "../../components/ui/sparkles";
 import { ContainerScroll } from "../../components/ui/container-scroll-animation";
-export const NoticeData = [
+const NoticeData = [
   {
     name: "Manu Arora",
     designation: "Founder, Algochurn",
@@ -119,7 +119,7 @@ export const NoticeData = [
   },
 ];
 
-const notice = () => {
+const Notice = () => {
   return (
     <>
     <div className="h-fit relative w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
@@ -148,4 +148,4 @@ const notice = () => {
   )
 }
 
-export default notice
+export default Notice
