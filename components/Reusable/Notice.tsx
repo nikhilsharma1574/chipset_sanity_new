@@ -128,7 +128,7 @@ export function HeroScrollDemo() {
             <h1 className="text-4xl font-semibold text-black dark:text-white">
               NOTICE <br />
               <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
-                UPDATE YOURSELF
+                UPDATE YOURSELF !!!!
               </span>
             </h1>
           </>
