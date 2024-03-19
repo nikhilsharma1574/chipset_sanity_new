@@ -30,10 +30,6 @@ const Navbar = () => {
       link: "/team"
     },
     {
-      label:"Contact Us",
-      link: "/contact"
-    },
-    {
       label:"Notice",
       link: "/notice"
     },
@@ -41,6 +37,10 @@ const Navbar = () => {
       label:"Gallery",
       link: "/gallery"
     },
+    {
+      label:"Contact Us",
+      link: "/contact"
+    }
   ]
   return (
     <section id="" className="sticky top-0 z-40 backdrop-blur">

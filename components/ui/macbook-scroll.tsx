@@ -2,6 +2,7 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { MotionValue, motion, useScroll, useTransform } from "framer-motion";
 import { cn } from "@/utils/cn";
+import chipset_logo from "../../public/assets/logo/64x_white_logo.png";
 import {
   IconBrightnessDown,
   IconBrightnessUp,
@@ -68,7 +69,7 @@ export const MacbookScroll = ({
   return (
     <div
       ref={ref}
-      className="md:min-h-[300vh] min-h-[100vh]  flex flex-col items-center py-0 md:py-80 justify-start flex-shrink-0 [perspective:800px] transform md:scale-100  scale-[0.35] sm:scale-50"
+      className="md:min-h-[300vh] min-h-[100vh] flex flex-col items-center py-0 md:py-80 justify-start flex-shrink-0 [perspective:800px] transform md:scale-100  scale-[0.35] sm:scale-50"
     >
       <motion.h2
         style={{
@@ -113,7 +114,11 @@ export const MacbookScroll = ({
         {showGradient && (
           <div className="h-40 w-full absolute bottom-0 inset-x-0 bg-gradient-to-t dark:from-black from-white via-white dark:via-black to-transparent z-50"></div>
         )}
-        {badge && <div className="absolute bottom-4 left-4">{badge}</div>}
+        {badge && <div className="absolute bottom-4 left-4">
+        <div className='font-bold'>
+            CH<span className='text-highlight text-[#f6a339]'>i</span>PSET{' '}
+          </div>
+        </div>}
       </div>
     </div>
   );
@@ -149,7 +154,8 @@ export const Lid = ({
           className="absolute inset-0 bg-[#010101] rounded-lg flex items-center justify-center"
         >
           <span className="text-white">
-            <AceternityLogo />
+            {/* <AceternityLogo /> */}
+            <Image src={chipset_logo} height={50} width={50} alt="logo"/>
           </span>
         </div>
       </div>

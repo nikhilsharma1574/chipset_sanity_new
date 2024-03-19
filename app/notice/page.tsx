@@ -1,52 +1,150 @@
 "use client";
- 
-import React, { useEffect, useState } from "react";
-import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
-
-const testimonials = [
+import React from "react";
+import { SparklesCore } from "../../components/ui/sparkles";
+import { ContainerScroll } from "../../components/ui/container-scroll-animation";
+export const NoticeData = [
   {
-    quote:
-      "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
-    name: "Charles Dickens",
-    title: "A Tale of Two Cities",
+    name: "Manu Arora",
+    designation: "Founder, Algochurn",
+    image: "https://picsum.photos/id/10/300/300",
+    badge: "Mentor",
   },
   {
-    quote:
-      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-    name: "William Shakespeare",
-    title: "Hamlet",
+    name: "Sarah Singh",
+    designation: "Founder, Sarah's Kitchen",
+    image: "https://picsum.photos/id/11/300/300",
+    badge: "Mentor",
   },
   {
-    quote: "All that we see or seem is but a dream within a dream.",
-    name: "Edgar Allan Poe",
-    title: "A Dream Within a Dream",
+    name: "John Doe",
+    designation: "Software Engineer, Tech Corp",
+    image: "https://picsum.photos/id/12/300/300",
+    badge: "Mentor",
   },
   {
-    quote:
-      "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
-    name: "Jane Austen",
-    title: "Pride and Prejudice",
+    name: "Jane Smith",
+    designation: "Product Manager, Innovate Inc",
+    image: "https://picsum.photos/id/13/300/300",
+    badge: "Mentor",
   },
   {
-    quote:
-      "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-    name: "Herman Melville",
-    title: "Moby-Dick",
+    name: "Robert Johnson",
+    designation: "Data Scientist, DataWorks",
+    image: "https://picsum.photos/id/14/300/300",
+    badge: "Mentor",
+  },
+  {
+    name: "Emily Davis",
+    designation: "UX Designer, DesignHub",
+    image: "https://picsum.photos/id/15/300/300",
+    badge: "Mentor",
+  },
+  {
+    name: "Michael Miller",
+    designation: "CTO, FutureTech",
+    image: "https://picsum.photos/id/16/300/300",
+    badge: "Mentor",
+  },
+  {
+    name: "Sarah Brown",
+    designation: "CEO, StartUp",
+    image: "https://picsum.photos/id/17/300/300",
+  },
+  {
+    name: "James Wilson",
+    designation: "DevOps Engineer, CloudNet",
+    image: "https://picsum.photos/id/18/300/300",
+    badge: "Something",
+  },
+  {
+    name: "Patricia Moore",
+    designation: "Marketing Manager, MarketGrowth",
+    image: "https://picsum.photos/id/19/300/300",
+    badge: "Mentor",
+  },
+  {
+    name: "Richard Taylor",
+    designation: "Frontend Developer, WebSolutions",
+    image: "https://picsum.photos/id/20/300/300",
+  },
+  {
+    name: "Linda Anderson",
+    designation: "Backend Developer, ServerSecure",
+    image: "https://picsum.photos/id/21/300/300",
+  },
+  {
+    name: "William Thomas",
+    designation: "Full Stack Developer, FullStack",
+    image: "https://picsum.photos/id/22/300/300",
+    badge: "Badger",
+  },
+  {
+    name: "Elizabeth Jackson",
+    designation: "Project Manager, ProManage",
+    image: "https://picsum.photos/id/23/300/300",
+    badge: "Mentor",
+  },
+  {
+    name: "David White",
+    designation: "Database Administrator, DataSafe",
+    image: "https://picsum.photos/id/24/300/300",
+    badge: "Advocate",
+  },
+  {
+    name: "Jennifer Harris",
+    designation: "Network Engineer, NetConnect",
+    image: "https://picsum.photos/id/25/300/300",
+  },
+  {
+    name: "Charles Clark",
+    designation: "Security Analyst, SecureIT",
+    image: "https://picsum.photos/id/26/300/300",
+  },
+  {
+    name: "Susan Lewis",
+    designation: "Systems Analyst, SysAnalyse",
+    image: "https://picsum.photos/id/27/300/300",
+  },
+  {
+    name: "Joseph Young",
+    designation: "Mobile Developer, AppDev",
+    image: "https://picsum.photos/id/28/300/300",
+    badge: "Mentor",
+  },
+  {
+    name: "Margaret Hall",
+    designation: "Quality Assurance, BugFree",
+    image: "https://picsum.photos/id/29/300/300",
+    badge: "Developer",
   },
 ];
 
 const notice = () => {
   return (
-    <div className='w-full p-1 md:p-6 flex flex-col'>
-            <div className='flex flex-col justify-center items-center'>            
-            <div className=''>
-              NOTICE
-            </div>
-            <div className="bg-red-600 w-full">
-              <InfiniteMovingCards items={testimonials} direction="right" speed="slow"/>
-            </div>
-            </div>  
+    <>
+    <div className="h-fit relative w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
+      <div className="w-full absolute inset-0 h-full">
+        <SparklesCore
+          id="tsparticlesfullpage"
+          background="transparent"
+          minSize={0.6}
+          maxSize={1.4}
+          particleDensity={100}
+          className="w-full h-full"
+          particleColor="#FFFFFF"
+        />
       </div>
+        <div className="flex flex-col overflow-hidden">
+        <ContainerScroll NoticeData={NoticeData} titleComponent={
+          <>
+            <h1 className="text-4xl md:text-6xl lg:text-8xl font-semibold text-white m-12">
+            NOTICE BOARD
+            </h1>
+          </>
+        }/>
+    </div>
+    </div>
+    </>
   )
 }
 
