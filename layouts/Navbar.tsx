@@ -38,9 +38,13 @@ const Navbar = () => {
       link: "/gallery"
     },
     {
+      label:"Event",
+      link: "/events"
+    },
+    {
       label:"Contact Us",
       link: "/contact"
-    }
+    },
   ]
   return (
     <section id="" className="sticky top-0 z-40 backdrop-blur">
