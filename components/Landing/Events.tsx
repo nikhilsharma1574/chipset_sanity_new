@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { BackgroundBeams } from "../ui/background-beams";
 import EventCard from "../Reusable/EventCard"
 import { Event } from "@/app/page";
 import Link from "next/link";
@@ -13,9 +12,9 @@ const Events = ({events}:{ events:Event[] }) => {
             <h1 className='font-bold'>Our Events</h1>
             <div>
               <Link href={"/events"}>
-              <button title="View all" className="text-[15px] bg-yellow-500 text-black rounded-md px-2 font-bold hover:scale-110 delay-150 transition-all">
-                View all
-              </button>
+                <button title="View all" className="text-[15px] bg-yellow-500 text-black rounded-md px-2 font-bold hover:scale-110 delay-150 transition-all">
+                  View all
+                </button>
               </Link>
             </div>
         </div>

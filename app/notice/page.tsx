@@ -1,7 +1,9 @@
-"use client";
 import React from "react";
 import { SparklesCore } from "../../components/ui/sparkles";
 import { ContainerScroll } from "../../components/ui/container-scroll-animation";
+import {noticeQuery } from "@/sanity/lib/queries";
+import { sanityFetch } from "@/sanity/lib/sanityFetch";
+
 const NoticeData = [
   {
     name: "Manu Arora",
@@ -119,7 +121,14 @@ const NoticeData = [
   },
 ];
 
-const Notice = () => {
+export type Notice={
+  _id :string;
+  notice: string,
+  pdf:string,
+}
+
+const Notice =async () => {
+
   return (
     <>
     <div className="h-fit relative w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
@@ -135,14 +144,11 @@ const Notice = () => {
         />
       </div>
         <div className="flex flex-col overflow-hidden">
-        <ContainerScroll NoticeData={NoticeData} titleComponent={
-          <>
-            <h1 className="text-4xl md:text-6xl lg:text-8xl font-semibold text-white m-12">
-            NOTICE BOARD
-            </h1>
-          </>
-        }/>
-    </div>
+        <ContainerScroll 
+        NoticeData={NoticeData} 
+        titleComponent={<><h1 className="text-4xl md:text-6xl lg:text-8xl font-semibold text-white m-12">NOTICE BOARD</h1></>}
+        />
+        </div>
     </div>
     </>
   )

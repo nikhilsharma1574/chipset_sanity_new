@@ -4,3 +4,4 @@ export const eventsQuery= groq`*[_type == 'events']{...,"mainImage":mainImage.as
 // export const profileQuery = groq`*[_type == 'profile']{...,"mainImage":mainImage.asset->url,"alt":mainImage.alt}[0]`;
 
 export const projectsQuery= groq`*[_type == 'project']{...,"mainImage":mainImage.asset->url,"alt":mainImage.alt}`;
+export const noticeQuery= groq`*[_type == 'notice']{...,"mainImage":mainImage.asset->url,"alt":mainImage.alt}`;

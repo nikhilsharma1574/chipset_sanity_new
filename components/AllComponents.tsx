@@ -7,6 +7,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Event, Hero } from '@/app/page'
 import { Herolanding } from './Landing/Hero'
+import Analytics from './Landing/Analytics'
 
 const AllComponents = ({slideshow,events}:{slideshow:Hero[] , events:Event[]}) => {
     useEffect(() => {
@@ -20,7 +21,8 @@ const AllComponents = ({slideshow,events}:{slideshow:Hero[] , events:Event[]}) =
       <div className="flex min-h-screen h-full w-full flex-col items-center justify-between ">
         <Herolanding images={slideshow}/>
         <AboutLanding/>
-        <Macbook />
+        <Macbook/>
+        <Analytics/>
         <Events events={events}/>
       </div>
     </main>
