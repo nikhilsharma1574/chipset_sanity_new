@@ -14,12 +14,12 @@ const EventCard = ({events}:{events:Event}) => {
                 <CardItem translateZ="100" className="mt-4 w-full">
                   <Image src={events.mainImage} height="1000" width="1000" className="object-contain rounded-xl group-hover/card:shadow-xl md:h-[150px]" alt="thumbnail"/>
                 </CardItem>
-                <p className='truncate-line-3 md:uppercase md:mt-4'>
+                <p className='truncate-line-3 md:uppercase md:mt-4 font-heading'>
                   {events.title}
                 </p>
                 </CardItem>
                   <CardItem as="p" translateZ="60" className="md:flex text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
-                  <p className="font-normal text-xs text-gray-700 line-clamp-3 h-fit">{events.desc}</p>
+                  <p className="font-normal text-xs text-gray-700 line-clamp-3 h-fit font-typer">{events.desc}</p>
                 </CardItem>
               <div className="flex justify-end items-center mt-6">
                 <CardItem translateZ={20} as="button" className="bg-[#f6a339] hover:bg-[#ab7837] px-6 py-2 text-sm rounded-[7px] mt-4" >

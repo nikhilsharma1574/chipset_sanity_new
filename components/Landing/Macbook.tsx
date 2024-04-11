@@ -10,7 +10,7 @@ export function Macbook() {
       <div className="overflow-hidden h-full w-full bg-slate-100">
     <MacbookScroll
           title={
-            <span data-aos="fade-down">
+            <span data-aos="fade-down" className="font-heading">
               THIS IS ABOUT INOVATION<br /> AND LEARNING
             </span>
           }

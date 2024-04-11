@@ -19,6 +19,10 @@ const config = {
       },
     },
     extend: {
+      fontFamily:{
+        'typer':["JetBrains Mono", 'monospace'],
+        'heading':["Anta", 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

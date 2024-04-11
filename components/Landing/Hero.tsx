@@ -14,7 +14,7 @@ export function Herolanding({ images}: { images: Hero[] }) {
           <div className='md:text-8xl sm:text-6xl text-white'>
             CH<span className='text-highlight text-[#f6a339]'>i</span>PSET{' '}
           </div>
-          <div className="">
+          <div className="font-heading">
             <Typewriter
                   options={{
                     strings: ['Collaboration', 'Hackers', 'Innovators', 'Programmers', 'Scriptwriters', 'Entrepreneurs', 'Technocrats'],

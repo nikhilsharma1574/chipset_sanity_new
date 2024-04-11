@@ -70,7 +70,7 @@ const Navbar = () => {
                     {
                       LINKS.map((item, idx) => (
                         <Link href={item.link} key={idx}>
-                          <ul className='font-semibold uppercase sm:text-xs text-[12px] text-[#ff5234] my-4'>
+                          <ul className='font-heading font-semibold uppercase sm:text-xs text-[12px] text-[#ff5234] my-4'>
                             <li>
                               {item.label}
                             </li>
@@ -88,7 +88,7 @@ const Navbar = () => {
               {
                 LINKS.map((item, idx) => (
                   <div className='' key={idx}>
-                  <Link href={item.link} key={idx} className='block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#ff5234] md:p-0 dark:text-white md:dark:hover:text-[#ff5234] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'>
+                  <Link href={item.link} key={idx} className='font-heading block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#ff5234] md:p-0 dark:text-white md:dark:hover:text-[#ff5234] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'>
                       {item.label}
                   </Link>
                   </div>

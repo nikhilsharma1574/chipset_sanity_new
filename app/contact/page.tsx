@@ -8,11 +8,11 @@ const ContactPage = () => {
           <div className='flex flex-1 flex-col md:flex-row'>
             <div className='flex flex-1 md:p-6 '>
               <div className='flex flex-col'>
-                  <p className='md:text-4xl font-extrabold text-xl md:font-semibold'>Contact us</p>
+                  <p className='md:text-4xl font-extrabold text-xl md:font-semibold font-heading'>Contact us</p>
                   <div className='2 md:hidden flex-1 my-6 flex justify-center items-center'>
                     <Image src={contact_logo} className='h-fit' height={200} width={200} alt='image'/> 
                   </div>
-                  <p className='font-paragraph_font text-xs md:text-lg my-6 lg:text-md md:mt-4'>CHiPSET is a Collaboration of Hackers, Innovators, Programmers, Script writers, Entrepreuners, and Technocrats. We are a non-profit organization with a zeal for making changes in the world by harvesting talents of unique individuals cross all domains.We believe in building the world by building it’s forever recurring addition; a family of inquisitive minds.</p>
+                  <p className='font-paragraph_font text-xs md:text-lg my-6 lg:text-md md:mt-4 font-typer '>CHiPSET is a Collaboration of Hackers, Innovators, Programmers, Script writers, Entrepreuners, and Technocrats. We are a non-profit organization with a zeal for making changes in the world by harvesting talents of unique individuals cross all domains.We believe in building the world by building it’s forever recurring addition; a family of inquisitive minds.</p>
               </div>
             </div>
             <div className='2 hidden  flex-1 my-6 md:flex justify-center items-center'>

@@ -146,7 +146,7 @@ const Notice =async () => {
         <div className="flex flex-col overflow-hidden">
         <ContainerScroll 
         NoticeData={NoticeData} 
-        titleComponent={<><h1 className="text-4xl md:text-6xl lg:text-8xl font-semibold text-white m-12">NOTICE BOARD</h1></>}
+        titleComponent={<><h1 className="font-heading text-4xl md:text-6xl lg:text-8xl font-semibold text-white m-12">NOTICE BOARD</h1></>}
         />
         </div>
     </div>

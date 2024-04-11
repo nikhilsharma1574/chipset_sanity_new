@@ -18,7 +18,7 @@ const AllComponents = ({slideshow,events}:{slideshow:Hero[] , events:Event[]}) =
       }, [])
     return (
     <main>
-      <div className="flex min-h-screen h-full w-full flex-col items-center justify-between ">
+      <div className="flex min-h-screen h-full w-full flex-col items-center overflow-hidden justify-between ">
         <Herolanding images={slideshow}/>
         <AboutLanding/>
         <Macbook/>
