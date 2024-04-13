@@ -41,6 +41,7 @@
     "react-visibility-sensor": "^5.1.1",
     "sanity": "^3.33.0",
     "sharp": "^0.33.2",
+    "simplex-noise": "^4.0.1",
     "styled-components": "^6.1.8",
     "tailwind-merge": "^2.2.2",
     "tailwindcss-animate": "^1.0.7",

@@ -1,4 +1,4 @@
-import React from 'react'
+import Background from '@/components/Team/Background';
 import { teamQuery } from '@/sanity/lib/queries'
 import { sanityFetch } from '@/sanity/lib/sanityFetch'
 export type Members={
@@ -14,7 +14,7 @@ const team = async () => {
   console.log(events);
   return (
     <div>
-      TEAM
+        <Background/>
     </div>
   )
 }

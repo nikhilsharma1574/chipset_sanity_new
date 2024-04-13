@@ -10,7 +10,7 @@ const Analytics = () => {
             <h1 className='font-heading text-yellow-500 font-bold uppercase text-xl md:text-4xl lg:text-6xl'>Team of enterprise</h1>
           </div>
 
-          <div className='font-typer w-full md:mt-12 items-center justify-center grid md:grid-cols-4 grid-cols-2 text-white object-contain'>
+          <div className='font-typer w-full md:mt-12 items-center justify-center grid gap-10 md:grid-cols-4 sm:grid-cols-1 text-white object-contain'>
             <div className='flex flex-col justify-center items-center'><p className='text-yellow-500 font-light'><CountUp  enableScrollSpy end={18} duration={4}/>+</p><p className='md:text-2xl lg:text-4xl text-lg font-medium md:font-bold'>EVENTS</p></div>
             <div className='flex flex-col justify-center items-center'><p className='text-yellow-500 font-light'><CountUp  enableScrollSpy end={24} duration={4}/>+</p><p className='md:text-2xl lg:text-4xl text-lg font-medium md:font-bold'>WEBINARS</p></div>
             <div className='flex flex-col justify-center items-center'><p className='text-yellow-500 font-light'><CountUp  enableScrollSpy end={900} duration={4}/>+</p><p className='md:text-2xl lg:text-4xl text-lg font-medium md:font-bold'>STUDENTS</p></div>

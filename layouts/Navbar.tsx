@@ -49,15 +49,15 @@ const Navbar = () => {
   return (
     <section id="" className="sticky top-0 z-40 backdrop-blur">
       <nav className ="md:w-full transition-all delay-10 h-[4rem] sm:h-[7rem] md:h-[7rem] px-4">
-        <div className ="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto h-full">
-            <Link href="/" className="flex items-center  ">
-              <div className='flex items-center scale-50 md:scale-90 lg:scale-100'>
+        <div className ="max-w-screen-xl flex flex-wrap items-center justify-between  mx-auto h-full">
+            <Link href="/" className="flex justify-center items-center">
+              <div className='flex'>
                 <div className=''>
-                <Image src={logo} height={100} width={100} alt='Logo' className='  w-16 md:p-1'/>
+                <Image src={logo} height={100} width={100} alt='Logo' className='w-10 md:w-16 md:p-1'/>
                 </div>
               <div>
-                <p className='font-bold text-[30px]'>CHiPSET</p>
-                <p className='font-semibold uppercase  text-[12px] text-[#ff5234]'>A Technical Community</p>
+                <p className='font-bold text-[19px] md:text-[24px] lg:text-[29px]'>CHiPSET</p>
+                <p className='font-semibold uppercase text-[6px] md:text-[8px] lg:text-[10px] text-[#ff5234]'>A Technical Community</p>
               </div>
               </div>
           </Link>

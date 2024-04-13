@@ -7,15 +7,14 @@ const ContactPage = () => {
       <div className='page4 p-6 flex flex-col'>
           <div className='flex flex-1 flex-col md:flex-row'>
             <div className='flex flex-1 md:p-6 '>
-              <div className='flex flex-col'>
+              <div className='flex flex-col w-full'>
                   <p className='md:text-4xl font-extrabold text-xl md:font-semibold font-heading'>Contact us</p>
                   <div className='2 md:hidden flex-1 my-6 flex justify-center items-center'>
-                    <Image src={contact_logo} className='h-fit' height={200} width={200} alt='image'/> 
+                    <Image src={contact_logo} className='h-full' height={200} width={200} alt='image'/> 
                   </div>
-                  <p className='font-paragraph_font text-xs md:text-lg my-6 lg:text-md md:mt-4 font-typer '>CHiPSET is a Collaboration of Hackers, Innovators, Programmers, Script writers, Entrepreuners, and Technocrats. We are a non-profit organization with a zeal for making changes in the world by harvesting talents of unique individuals cross all domains.We believe in building the world by building it’s forever recurring addition; a family of inquisitive minds.</p>
-              </div>
+                </div>
             </div>
-            <div className='2 hidden  flex-1 my-6 md:flex justify-center items-center'>
+            <div className='2 hidden flex-1 my-6 md:flex justify-center items-center'>
                 <Image src={contact_logo} className='h-fit' height={600} width={600} alt='image'/> 
             </div>
           </div>
@@ -23,10 +22,10 @@ const ContactPage = () => {
           <div className='page5 Gallery md:px-6 flex flex-col'>
             <div className='w-full flex justify-center items-center'>
               <div className='md:px-6 md:w-1/2 w-full px-12'>
-                <h5 id="drawer-label" className="inline-flex justify-center items-center mb-6 text-[12px] font-semibold text-gray-500 uppercase dark:text-gray-400"><svg className="w-4 h-4 mr-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
+                {/* <h5 id="drawer-label" className="inline-flex justify-center items-center mb-6 text-[12px] font-semibold text-gray-500 uppercase dark:text-gray-400"><svg className="w-4 h-4 mr-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
                 <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"/>
                 <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"/>
-                </svg>Contact us</h5>
+                </svg>Contact us</h5> */}
                <form action="#" className="mb-6">
               <div className="mb-6">
                  <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
