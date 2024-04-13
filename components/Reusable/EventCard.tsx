@@ -22,10 +22,10 @@ const EventCard = ({events}:{events:Event}) => {
                   <p className="font-normal text-xs text-gray-700 line-clamp-3 h-fit font-typer">{events.desc}</p>
                 </CardItem>
               <div className="flex justify-end items-center mt-6">
-                <CardItem translateZ={20} as="button" className="bg-[#f6a339] hover:bg-[#ab7837] px-6 py-2 text-sm rounded-[7px] mt-4" >
+                {/* <CardItem translateZ={20} as="button" className="bg-[#f6a339] hover:bg-[#ab7837] px-6 py-2 text-sm rounded-[7px] mt-4" > */}
                   {/* 2024 */}
-                  {events.title}
-                </CardItem>
+                  {/* {events.title} */}
+                {/* </CardItem> */}
               </div>
             </CardBody>
         </CardContainer>

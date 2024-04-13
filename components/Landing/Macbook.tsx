@@ -8,10 +8,12 @@ import { AuroraBackground } from "../ui/aurora-background";
 export function Macbook() {
     return (
       <div className="overflow-hidden h-full w-full bg-slate-100">
+
     <MacbookScroll
           title={
             <span data-aos="fade-down" className="font-heading">
-              THIS IS ABOUT INOVATION<br /> AND LEARNING
+              THIS IS ABOUT <br/>
+              <span className="text-[#f6a339]">INOVATION</span> AND <span className="text-[#f6a339]">LEARNING</span>
             </span>
           }
           badge={
@@ -21,7 +23,7 @@ export function Macbook() {
           }
           src={"/assets/LandingPagePic/macbookScreen.png"}
           showGradient={false}
-        />
+          />
       </div>
     );
   }

@@ -48,16 +48,16 @@ const Navbar = () => {
   ]
   return (
     <section id="" className="sticky top-0 z-40 backdrop-blur">
-      <nav className ="md:w-full transition-all delay-10 h-[4rem]  sm:h-[7rem] md:h-[7rem] px-4">
-        <div className ="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto h-full ">
+      <nav className ="md:w-full transition-all delay-10 h-[4rem] sm:h-[7rem] md:h-[7rem] px-4">
+        <div className ="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto h-full">
             <Link href="/" className="flex items-center  ">
-              <div className='flex items-center '>
+              <div className='flex items-center scale-50 md:scale-90 lg:scale-100'>
                 <div className=''>
-                <Image src={logo} height={100} width={100} alt='Logo' className=' w-10 sm:w-20 md:w-16 p-1'/>
+                <Image src={logo} height={100} width={100} alt='Logo' className='  w-16 md:p-1'/>
                 </div>
               <div>
-                <p className='font-bold text-2xl sm:text-4xl'>CHiPSET</p>
-                <p className='font-semibold uppercase sm:text-xs text-[2px] text-[#ff5234]'>A Technical Community</p>
+                <p className='font-bold text-[30px]'>CHiPSET</p>
+                <p className='font-semibold uppercase  text-[12px] text-[#ff5234]'>A Technical Community</p>
               </div>
               </div>
           </Link>
@@ -88,7 +88,7 @@ const Navbar = () => {
               {
                 LINKS.map((item, idx) => (
                   <div className='' key={idx}>
-                  <Link href={item.link} key={idx} className='font-heading block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#ff5234] md:p-0 dark:text-white md:dark:hover:text-[#ff5234] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'>
+                  <Link href={item.link} key={idx} className='font-heading block py-2 pl-3 pr-4 sm:text-[12px] lg:text-[16px] text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#ff5234] md:p-0 dark:text-white md:dark:hover:text-[#ff5234] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'>
                       {item.label}
                   </Link>
                   </div>
