@@ -8,7 +8,6 @@ import 'aos/dist/aos.css';
 import { Event, Hero } from '@/app/page'
 import { Herolanding } from './Landing/Hero'
 import Analytics from './Landing/Analytics'
-import Text from './Landing/Text'
 
 const AllComponents = ({slideshow,events}:{slideshow:Hero[] , events:Event[]}) => {
     useEffect(() => {
@@ -25,6 +24,8 @@ const AllComponents = ({slideshow,events}:{slideshow:Hero[] , events:Event[]}) =
         <Macbook/>
         <Analytics/>
         <Events events={events}/>
+        {/* <Test/> */}
+        
       </div>
     </main>
   )
