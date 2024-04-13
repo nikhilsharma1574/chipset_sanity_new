@@ -3,6 +3,7 @@ import AllComponents from "@/components/AllComponents";
 import { sanityFetch } from "@/sanity/lib/sanityFetch";
 import { eventsQuery, heroQuery, noticeQuery } from "@/sanity/lib/queries";
 export type Hero = {
+  mainImage: any;
   title: string,
   desc:string,
   slug: string,
