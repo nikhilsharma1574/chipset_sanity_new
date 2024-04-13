@@ -2,12 +2,17 @@ import {defineField, defineType} from 'sanity'
 
 export default defineType({
   name: 'notice',
-  title: 'Notice',
+  title: 'notice',
   type: 'document',
   fields: [
     defineField({
-      name: 'notice',
-      title: 'Notice',
+      name: 'title',
+      title: 'Title',
+      type: 'string',
+    }),
+    defineField({
+      name: 'desc',
+      title: 'Description',
       type: 'string',
     }),
     defineField({
@@ -15,14 +20,17 @@ export default defineType({
       title: 'Slug',
       type: 'slug',
       options: {
-        source: 'notice',
+        source: 'title',
         maxLength: 96,
       },
     }),
     defineField({
-      name: 'pdf',
-      title: 'PDF',
-      type: 'file'
+      name: 'attachment',
+      title: 'Attachment',
+      type: 'file',
+      options: {
+        accept: '.pdf',
+      },
     }),
   ],
   preview: {
