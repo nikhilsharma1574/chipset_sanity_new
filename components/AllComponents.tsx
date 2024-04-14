@@ -8,6 +8,7 @@ import 'aos/dist/aos.css';
 import { Event, Hero } from '@/app/page'
 import { Herolanding } from './Landing/Hero'
 import Analytics from './Landing/Analytics'
+import PageLoader from './Reusable/PageLoader'
 
 const AllComponents = ({slideshow,events}:{slideshow:Hero[] , events:Event[]}) => {
     useEffect(() => {
@@ -18,6 +19,7 @@ const AllComponents = ({slideshow,events}:{slideshow:Hero[] , events:Event[]}) =
       }, [])
     return (
     <main>
+      <PageLoader />
       <div className="flex min-h-screen h-full w-full flex-col items-center overflow-hidden justify-between ">
         <Herolanding images={slideshow}/>
         <AboutLanding/>

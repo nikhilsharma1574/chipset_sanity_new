@@ -75,10 +75,23 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        pageLoad: {
+          '0%': { top: '0', },
+          '33%': { top: '0', },
+          '100%': { top: '-150%', },
+        },
+        pageLoadImage: {
+          '0%': { opacity: '0', top: '2rem' }, 
+          '80%': { opacity: '1', top: '-0.4rem' }, 
+          '100%': { top: '1' } 
+        }
+        
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        'page-load': 'pageLoad 3s ease-in-out forwards',
+        'page-load-image': 'pageLoadImage .8s ease-in-out forwards'
       },
     },
   },

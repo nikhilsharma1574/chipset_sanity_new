@@ -9,7 +9,6 @@ const page = () => {
     </div>
   );
 }
-
 const SkeletonOne = () => {
   return (
     <div>
