@@ -3,6 +3,9 @@ import AllComponents from "@/components/AllComponents";
 import { sanityFetch } from "@/sanity/lib/sanityFetch";
 import { eventsQuery, heroQuery, noticeQuery } from "@/sanity/lib/queries";
 import { Suspense } from "react";
+import PageLoader from "@/components/Reusable/PageLoader";
+import { promises } from "dns";
+import { resolve } from "path";
 export type Hero = {
   mainImage: any;
   title: string,
@@ -26,13 +29,15 @@ export type Notice={
 }
 
 export default async function Home() {
+  await new Promise(resolve=>setTimeout(resolve,3000))
+  
   const slideshow = await sanityFetch<Hero[]>({query:heroQuery});
   const events = await sanityFetch<Event[]>({query:eventsQuery});
   return (
     <main >
-      {/* <Suspense fallback={<p className="text-black flex w-screen h-screen bg-red-500">Loading feed...</p>}> */}
+      <Suspense fallback={ <PageLoader/> }>
         <AllComponents slideshow={slideshow} events={events}/>
-      {/* </Suspense> */}
+      </Suspense>
     </main>
   );
 }
