@@ -21,7 +21,11 @@ const aboutLanding = () => {
                     </div>
                     </div>
                   </div>
-                  <p data-aos="fade-up" className='font-typer text-xs md:text-[10px] lg:text-[13px] lg:text-md md:mt-4 lg:font-bold'>CHiPSET is a Collaboration of Hackers, Innovators, Programmers, Script writers, Entrepreuners, and Technocrats. We are a non-profit organization with a zeal for making changes in the world by harvesting talents of unique individuals cross all domains.We believe in building the world by building it’s forever recurring addition; a family of inquisitive minds.</p>
+                  <p data-aos="fade-up" className='font-typer text-xs md:text-[10px] lg:text-[13px] lg:text-md md:mt-4 lg:font-bold'>CHiPSET stands as a collaborative force, drawing together a diverse array of talents under one united banner. Comprising hackers, innovators, programmers, scriptwriters, entrepreneurs, and technocrats, we are a dynamic non-profit organization propelled by a shared passion for effecting positive change in the world. Our mission transcends traditional boundaries, harnessing the collective expertise and ingenuity of individuals from across all domains.
+                  <br/><br/><br/><br/>
+                  <p className='hidden md:block'>
+                    At the heart of our ethos lies a firm belief in the transformative power of collaboration. We envision a world where innovation knows no limits, where barriers are dismantled, and where the potential of every individual is fully realized.With an unwavering commitment to excellence, we endeavor to nurture a community of inquisitive minds—an ever-growing family bound by a relentless pursuit of knowledge and progress.</p>
+                  </p>
                </div>
              </div>
             <div data-aos="fade-left" className='2 hidden flex-1 md:flex justify-center items-center my-6'>

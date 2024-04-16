@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import contact_logo from '../../public/svg/contact_us.svg'
+import Binacular from '@/components/Reusable/Binacular'
 const ContactPage = () => {
   return (
     <div>
@@ -10,12 +11,15 @@ const ContactPage = () => {
               <div className='flex flex-col w-full'>
                   <p className='md:text-4xl font-extrabold text-xl md:font-semibold font-heading'>Contact us</p>
                   <div className='2 md:hidden flex-1 my-6 flex justify-center items-center'>
-                    <Image src={contact_logo} className='h-full' height={200} width={200} alt='image'/> 
+                    {/* <Image src={contact_logo} className='h-full' height={200} width={200} alt='image'/>  */}
+                    <Binacular/>
                   </div>
                 </div>
             </div>
             <div className='2 hidden flex-1 my-6 md:flex justify-center items-center'>
-                <Image src={contact_logo} className='h-fit' height={600} width={600} alt='image'/> 
+                {/* <Image src={contact_logo} className='h-fit' height={600} width={600} alt='image'/>  */}
+                <Binacular/>
+
             </div>
           </div>
 

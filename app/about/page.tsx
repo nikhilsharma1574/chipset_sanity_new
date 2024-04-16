@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import  aboutusdata  from "../../public/svg/about_us.svg";
 import Image from 'next/image';
 import Timeline from '@/components/Reusable/TimeLine';
+import ChitsetTshirt from '@/components/Reusable/ChitsetTshirt';
+import PageLoader from '@/components/Reusable/PageLoader';
 const about = () => {
   return (
     <div>
+      {/* <Suspense fallback={ <PageLoader/> }> */}
+
       <div className='w-full p-1 md:p-6 flex flex-col'>
         <div className='flex flex-col'>
           <div className='page2 p-4 flex flex-col'>
@@ -22,7 +26,8 @@ const about = () => {
                 </div>
               </div>
               <div data-aos="fade-left" className='2 hidden flex-1 my-6 md:flex justify-center items-center'>
-                  <Image src={aboutusdata} className='h-fit' height={400} width={400} alt='image'/> 
+                  {/* <Image src={aboutusdata} className='h-fit' height={400} width={400} alt='image'/>  */}
+                  <ChitsetTshirt/>
               </div>
             </div>
             <div data-aos="slide-up" className='flex justify-center'>
@@ -40,6 +45,7 @@ const about = () => {
           </div>
             </div>
           </div>
+      {/* </Suspense> */}
     </div>
   )
 }

@@ -1,0 +1,12 @@
+import math
+def max_pairs_of_friends(n, m):
+    k = n // m  
+    r = n - k * (m - 1)  
+    pairs_within_largest_team = math.comb(k, 2)
+    additional_pairs = k * (r - 1)
+    total_pairs = pairs_within_largest_team + additional_pairs
+    return total_pairs*2
+
+# Example usage:
+n, m = map(int, input().split())
+print(max_pairs_of_friends(n, m))

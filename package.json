@@ -18,6 +18,7 @@
     "@react-three/fiber": "^8.16.1",
     "@sanity/image-url": "^1.0.2",
     "@sanity/vision": "^3.33.0",
+    "@splinetool/react-spline": "^2.2.6",
     "@tabler/icons-react": "^3.0.3",
     "@tsparticles/engine": "^3.3.0",
     "@tsparticles/react": "^3.0.0",
