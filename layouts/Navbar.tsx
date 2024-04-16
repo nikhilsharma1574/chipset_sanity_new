@@ -46,7 +46,7 @@ const Navbar = () => {
 
     return (
         <section id="" className="sticky top-0 z-40 backdrop-blur mix-blend-exclusion">
-            <header className="w-full p-4 md:px-16 py-8 lg:max-w-7xl lg:mx-auto flex items-center justify-between">
+            <header className="w-full p-4 md:px-10 py-8 lg:max-w-7xl lg:mx-auto flex items-center justify-between">
                 <div>
                   <Link href="/" className="flex justify-center items-center ">
                   <div className='flex'>
