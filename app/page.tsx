@@ -19,8 +19,9 @@ export type Event={
   title: string,
   desc: string,
   mainImage: string,
-  github_link: string,
-  live_link: string
+  domain: string,
+  date: string,
+  candidates:string
 }
 export type Notice={
   _id :string;

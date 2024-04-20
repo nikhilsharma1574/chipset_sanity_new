@@ -5,6 +5,7 @@ import { Event } from "@/app/page";
 import Link from "next/link";
 
 const Events = ({events}:{ events:Event[] }) => {
+  console.log(events);
   return (
     <>
         <div className="w-full h-full flex flex-col md:p-12 p-6"> 
@@ -12,7 +13,7 @@ const Events = ({events}:{ events:Event[] }) => {
             <h1 className='font-bold font-heading'>Our Events</h1>
             <div>
               <Link href={"/events"}>
-                <button title="View all" className="text-[15px] bg-yellow-500 text-black rounded-md px-2 font-bold hover:scale-110 delay-150 transition-all">
+                <button title="View all" className="text-[12px] bg-yellow-500 text-white rounded-md px-2 font-typer hover:scale-110 delay-150 transition-all">
                   View all
                 </button>
               </Link>

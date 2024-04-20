@@ -4,8 +4,7 @@ import React from 'react'
 
 const RobotContact = () => {
   return (
-      <Spline scene="https://prod.spline.design/UhCa6pCpFPxMkRxf/scene.splinecode" />
-      
+    <Spline scene="https://prod.spline.design/UhCa6pCpFPxMkRxf/scene.splinecode" />
   )
 }
 

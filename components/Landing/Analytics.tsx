@@ -19,7 +19,7 @@ const Analytics = () => {
 
           <div className='flex text-center justify-center items-center text-white text-xs md:text-lg lg:text-xl'>
             <p className="">
-              <span className="text-yellow-500">Unlocking</span> the potential of technology together, our technical club drives innovation and learning.
+              <span className="text-yellow-500">Longest</span> Standing club of SRM Ramapurm
             </p>
           </div>
         </div>

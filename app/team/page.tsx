@@ -1,6 +1,13 @@
+import ManSitting from '@/components/Reusable/ManSitting';
+import PageLoader from '@/components/Reusable/PageLoader';
+import SplineViewer from '@/components/Reusable/SplineViewer';
 import Background from '@/components/Team/Background';
+import Test from '@/components/Team/Test';
 import { teamQuery } from '@/sanity/lib/queries'
 import { sanityFetch } from '@/sanity/lib/sanityFetch'
+import Spline from '@splinetool/react-spline';
+import { SplineIcon } from 'lucide-react';
+import { Suspense } from 'react';
 export type Members={
   _id :string;
   title: string,
@@ -9,24 +16,16 @@ export type Members={
   github_link: string,
   live_link: string
 }
-const team = async () => {
+export default async function team() {
+  await new Promise(resolve=>setTimeout(resolve,3000))
   const events = await sanityFetch<Members[]>({query:teamQuery});
-  console.log(events);
   return (
-    <div className='h-screen bg-yellow-100'>
-        <div className='absolute'>
-          <Background/>
-        </div>
-        <div className='flex items-center justify-center h-1/2'>
-          <p className='flex items-center justify-center uppercase md:text-[40px] lg:text-[50px] font-typer w-full font-bold'>
-            Comming Soon
-          </p>
-          <p className='flex items-center justify-center w-full '>
-            
-          </p>
-        </div>
+    <>
+    <div className=''>
+      <ManSitting/>
     </div>
+    </>
   )
 }
 
-export default team
+

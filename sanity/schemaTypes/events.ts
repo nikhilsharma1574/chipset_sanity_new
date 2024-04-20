@@ -16,6 +16,21 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'domain',
+      title: 'Domain',
+      type: 'string',
+    }),
+    defineField({
+      name: 'date',
+      title: 'Date',
+      type: 'date',
+    }),
+    defineField({
+      name: 'candidates',
+      title: 'Candidates',
+      type: 'string',
+    }),
+    defineField({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
@@ -31,16 +46,6 @@ export default defineType({
       options: {
         hotspot: true,
       },
-    }),
-    defineField({
-      name: 'github',
-      title: 'Github link',
-      type: 'string',
-    }),
-    defineField({
-      name: 'livelink',
-      title: 'livelink',
-      type: 'string',
     }),
   ],
   preview: {

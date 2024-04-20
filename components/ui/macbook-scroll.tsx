@@ -44,12 +44,12 @@ export const MacbookScroll = ({
   });
 
   const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    if (window && window.innerWidth < 768) {
-      setIsMobile(true);
-    }
-  }, []);
+    useEffect(() => {
+      if (window && window.innerWidth < 768) {
+        setIsMobile(true);
+      }
+    }, []);
+  
 
   const scaleX = useTransform(
     scrollYProgress,
@@ -61,7 +61,8 @@ export const MacbookScroll = ({
     [0, 0.3],
     [0.6, isMobile ? 1 : 1.5]
   );
-  const translate = useTransform(scrollYProgress, [0, 1], [0, 1500]);
+  const translatemob = useTransform(scrollYProgress, [0, 1], [0, 100]);
+  const translatedesktop = useTransform(scrollYProgress, [0, 1], [0, 1700]);
   const rotate = useTransform(scrollYProgress, [0.1, 0.12, 0.3], [-28, -28, 0]);
   const textTransform = useTransform(scrollYProgress, [0, 0.3], [0, 100]);
   const textOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
@@ -90,7 +91,7 @@ export const MacbookScroll = ({
         scaleX={scaleX}
         scaleY={scaleY}
         rotate={rotate}
-        translate={translate}
+        translatemob={isMobile ? translatemob : translatedesktop}
       />
       {/* Base area */}
       <div className="h-[22rem] w-[32rem] bg-gray-200 dark:bg-[#272729] rounded-2xl overflow-hidden relative -z-10">
@@ -128,13 +129,13 @@ export const Lid = ({
   scaleX,
   scaleY,
   rotate,
-  translate,
+  translatemob,
   src,
 }: {
   scaleX: MotionValue<number>;
   scaleY: MotionValue<number>;
   rotate: MotionValue<number>;
-  translate: MotionValue<number>;
+  translatemob: MotionValue<number>;
   src?: string;
 }) => {
   return (
@@ -164,7 +165,7 @@ export const Lid = ({
           scaleX: scaleX,
           scaleY: scaleY,
           rotateX: rotate,
-          translateY: translate,
+          translateY: translatemob,
           transformStyle: "preserve-3d",
           transformOrigin: "top",
         }}

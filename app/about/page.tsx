@@ -7,7 +7,6 @@ import PageLoader from '@/components/Reusable/PageLoader';
 const about = () => {
   return (
     <div>
-      {/* <Suspense fallback={ <PageLoader/> }> */}
 
       <div className='w-full p-1 md:p-6 flex flex-col'>
         <div className='flex flex-col'>
@@ -26,7 +25,6 @@ const about = () => {
                 </div>
               </div>
               <div data-aos="fade-left" className='2 hidden flex-1 my-6 md:flex justify-center items-center'>
-                  {/* <Image src={aboutusdata} className='h-fit' height={400} width={400} alt='image'/>  */}
                   <ChitsetTshirt/>
               </div>
             </div>

@@ -11,7 +11,7 @@ const aboutLanding = () => {
              <div className='flex flex-1 md:p-6 '>
                <div className='flex flex-col'>
                   <p data-aos="fade-right" className='md:text-4xl font-bold text-xl lg:text-[50px] md:font-semibold'><span className='font-heading'>What is</span> CH<span className='text-[#f6a339]'>i</span>PSET</p>
-                  <p data-aos="fade-up" className='text-black lg:p-4 md:pt-2 md:text-[9px] text-center italic text-xs mt-2 lg:mt-12'>Keeping together is progress. Coming together is a beginning. Working together is sucess.</p>
+                  <p data-aos="fade-up" className='text-black lg:p-4 md:pt-2 lg:text-[14px] md:text-[9px] text-center italic text-xs mt-2 lg:mt-12'>Keeping together is progress. Coming together is a beginning. Working together is sucess.</p>
                   <div className='2 md:hidden flex-1 my-6 flex justify-center items-center '>
                     <div data-aos="fade-left">
                     <div className="player-wrapper">
@@ -38,15 +38,6 @@ const aboutLanding = () => {
           </div>
         </div>
           </div>
-            {/* <h1 className='md:text-4xl p-4 font-bold text-xl md:font-bold'>Our Events</h1> */}
-          {/* <div className='flex flex-col h-full md:grid md:grid-cols-2 lg:grid-cols-4 lg:scale-95 py-6 md:gap-16 gap-6 '> */}
-            {/* {
-              events.map((event,index)=>(
-                <div key={index} data-aos="fade-up" className='flex justify-center w-full duration-100'>
-                  <Card {...event}/>
-                  </div>                
-              ))} */}
-          {/* </div> */}
         </div>
       </>
   )

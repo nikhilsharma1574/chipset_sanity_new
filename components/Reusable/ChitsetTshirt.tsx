@@ -7,9 +7,9 @@ const ChitsetTshirt = () => {
   
   return (
     <div className=''>
-      <Suspense fallback={ <PageLoader/> }>
-        <Spline scene="https://prod.spline.design/MZAT3kA1LHluHoJG/scene.splinecode" />
-      </Suspense>
+      {/* <Suspense fallback={ <PageLoader/> }> */}
+      <Spline scene="https://prod.spline.design/mWV7aJhC00dAFICm/scene.splinecode" />
+      {/* </Suspense> */}
     </div>
   )
 }
