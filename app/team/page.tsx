@@ -1,7 +1,6 @@
 import ManSitting from '@/components/Reusable/ManSitting';
 import PageLoader from '@/components/Reusable/PageLoader';
 import Background from '@/components/Team/Background';
-import Test from '@/components/Team/Test';
 import { teamQuery } from '@/sanity/lib/queries'
 import { sanityFetch } from '@/sanity/lib/sanityFetch'
 import Spline from '@splinetool/react-spline';
