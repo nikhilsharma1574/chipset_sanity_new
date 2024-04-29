@@ -67,7 +67,7 @@ const Navbar = () => {
                             <Link
                                 key={idx}
                                 href={item.link}
-                                className="text-black transition-all hover:text-orange-600 duration-300  hover:text-primary"
+                                className="text-black transition-all hover:text-orange-400 duration-300"
                             >
                                 {item.label}
                             </Link>
@@ -88,7 +88,7 @@ const Navbar = () => {
                                             <Link
                                                 key={idx}
                                                 href={item.link}
-                                                className="transition-all duration-300 text-lg hover:text-orange-400"
+                                                className="transition-all duration-300 text-lg"
                                             >
                                                 {item.label}
                                             </Link>
