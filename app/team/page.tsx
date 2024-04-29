@@ -1,11 +1,7 @@
-import ManSitting from '@/components/Reusable/ManSitting';
-import PageLoader from '@/components/Reusable/PageLoader';
-import Background from '@/components/Team/Background';
 import { teamQuery } from '@/sanity/lib/queries'
 import { sanityFetch } from '@/sanity/lib/sanityFetch'
-import Spline from '@splinetool/react-spline';
-import { SplineIcon } from 'lucide-react';
-import { Suspense } from 'react';
+import Image from 'next/image';
+import commingSoon from "../../public/assets/LandingLogos/commingSoon.png"
 export type Members={
   _id :string;
   title: string,
@@ -19,9 +15,15 @@ export default async function team() {
   const events = await sanityFetch<Members[]>({query:teamQuery});
   return (
     <>
-    <div className=''>
-      <ManSitting/>
+    <div className='absolute flex justify-center items-center md:justify-start w-full'>
+      <h1 className='p-12 font-typer text-xl font-bold'>
+        COMMING SOON
+      </h1>
     </div>
+    <div className='relative flex justify-center items-center w-full h-screen md:h-full'>
+      <Image src={commingSoon} height={2000} width={2000} className=' transition-all h-[340px] object-cover md:h-[500px] md:w-full' alt='logo'/>
+    </div>
+    
     </>
   )
 }

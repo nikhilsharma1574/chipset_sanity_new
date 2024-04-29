@@ -10,14 +10,13 @@ const ContactPage = () => {
   return (
 <>
       <div className=''>
-          <RobotContact/>
         </div>
         <div className='md:my-12 flex md:h-screen flex-1 flex-row items-center justify-center h-1/2'>
           <div className='p-12 flex items-center justify-center w-full '>
             <Form/>
           </div>
           <div className='p-12 items-center justify-center w-full'>
-          <ThubsUp/>
+          {/* <ThubsUp/> */}
           </div>
         </div>
   

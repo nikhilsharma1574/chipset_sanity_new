@@ -4,7 +4,9 @@ import React from 'react'
 
 const RobotContact = () => {
   return (
-    <Spline scene="https://prod.spline.design/UhCa6pCpFPxMkRxf/scene.splinecode" />
+    <div style={{ height: '100vh' }}>
+      <Spline scene="https://prod.spline.design/UhCa6pCpFPxMkRxf/scene.splinecode" />
+    </div>
   )
 }
 

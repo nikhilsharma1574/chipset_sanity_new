@@ -4,10 +4,7 @@ import React from 'react'
 
 const ManSitting = () => {
   return (
-    <div className='bg-orange-500' style={{ height: '100vh' }}>
-      <div className='absolute flex pl-12 pt-12 items-center justify-center bg-red-600'>
-        COMMING SOON
-      </div>
+    <div className='' style={{ height: '100vh', width:'170vh' }}>
       <Spline scene="https://prod.spline.design/uLAHkWw6JqTqEDzI/scene.splinecode" />
     </div>
   )

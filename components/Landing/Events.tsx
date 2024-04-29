@@ -5,7 +5,7 @@ import { Event } from "@/app/page";
 import Link from "next/link";
 
 const Events = ({events}:{ events:Event[] }) => {
-  console.log(events);
+  // console.log(events);
   return (
     <>
         <div className="w-full h-full flex flex-col md:p-12 p-6"> 
