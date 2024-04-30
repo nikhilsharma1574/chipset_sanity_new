@@ -9,7 +9,6 @@ import { Event, Hero } from '@/app/page'
 import { Herolanding } from './Landing/Hero'
 import Analytics from './Landing/Analytics'
 import PageLoader from './Reusable/PageLoader'
-import { MovingCards } from './Landing/MovingCards'
 
 const AllComponents = ({slideshow,events}:{slideshow:Hero[] , events:Event[]}) => {
     useEffect(() => {

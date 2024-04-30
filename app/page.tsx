@@ -31,12 +31,12 @@ export type Notice={
 }
 
 export default async function Home() {
-  await new Promise(resolve=>setTimeout(resolve,3000))
+  // await new Promise(resolve=>setTimeout(resolve,3000))
 
   const slideshow = await sanityFetch<Hero[]>({query:heroQuery});
   const events = await sanityFetch<Event[]>({query:eventsQuery});
   return (
-    <main >
+    <main>
       <Suspense fallback={ <PageLoader/> }>
         <AllComponents slideshow={slideshow} events={events}/>
       </Suspense>

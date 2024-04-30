@@ -4,7 +4,8 @@ import React from 'react'
 import { Event } from '../page';
 import EventCard from '@/components/Reusable/EventCard';
 
-const page = async () => {
+
+  export default async function page() {
     const events = await sanityFetch<Event[]>({query:eventsQuery});
   return (
     <>
@@ -34,4 +35,4 @@ const page = async () => {
   )
 }
 
-export default page
+

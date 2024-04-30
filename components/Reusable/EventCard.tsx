@@ -14,7 +14,7 @@ const EventCard = ({events}:{events:Event}) => {
                 <CardItem translateZ="20" className="mt-4 w-full">
                   <Image src={events.mainImage} height="1000" width="1000" className="object-contain rounded-xl group-hover/card:shadow-xl md:h-[150px]" alt="thumbnail"/>
                 </CardItem>
-                <p className='truncate-line-3 md:uppercase my-4 text-[17px] text-orange-600 md:text-[20px] md:mt-4 font-heading'>
+                <p className='truncate-line-3 md:uppercase my-4 text-[17px] text-[#f39e2f] md:text-[20px] md:mt-4 font-heading'>
                   {events.title}
                 </p>
                 </CardItem>

@@ -4,12 +4,14 @@ import Image from 'next/image';
 import Timeline from '@/components/Reusable/TimeLine';
 import ChitsetTshirt from '@/components/Reusable/ChitsetTshirt';
 import PageLoader from '@/components/Reusable/PageLoader';
-const about = () => {
+export default async function about() {
+  // await new Promise(resolve=>setTimeout(resolve,3000))
+  
   return (
     <div>
-
-      <div className='w-full p-1 md:p-6 flex flex-col'>
-        <div className='flex flex-col'>
+      <Suspense fallback={<PageLoader />}>
+          <div className='w-full p-1 md:p-6 flex flex-col'>
+          <div className='flex flex-col'>
           <div className='page2 p-4 flex flex-col'>
             <div className='flex flex-1 flex-col md:flex-row'>
               <div className='flex flex-1 md:p-6 '>
@@ -44,8 +46,9 @@ const about = () => {
           </div>
             </div>
           </div>
+      </Suspense>
     </div>
   )
 }
 
-export default about
+

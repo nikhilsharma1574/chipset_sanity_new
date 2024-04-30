@@ -12,7 +12,7 @@ export type Notice = {
   attachmentURL: string;
 };
 
-const Notice = async () => {
+export default async function Notice() {
   const notice = await sanityFetch<Notice[]>({ query: noticeQuery });
 
   return (
@@ -34,7 +34,7 @@ const Notice = async () => {
             notice={notice}
             titleComponent={
               <>
-                <h1 className="font-heading text-4xl md:text-6xl lg:text-8xl font-semibold text-[#f6a339] m-12">
+                <h1 className="font-heading text-4xl md:text-6xl lg:text-8xl font-semibold text-[#f39e2f] m-12">
                   NOTICE BOARD
                 </h1>
               </>
@@ -46,4 +46,3 @@ const Notice = async () => {
   );
 };
 
-export default Notice;

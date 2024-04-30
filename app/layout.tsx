@@ -17,16 +17,16 @@ Readonly<{children: React.ReactNode;}>)
   return (
     <>
     <Head>
-        <title>CHIPSET</title>
-        <meta name="CHIPSET | SRM UNIVERSITY RAMAPURAM" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-    <html lang="en">
+      <title>CHIPSET</title>
+      <meta name="CHIPSET | SRM UNIVERSITY RAMAPURAM" />
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
+    <html lang="en" className="scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar scrollbar-thumb-yellow-500 h-32 overflow-y-scroll">
       <body className={`${inter.className}`}>
         <Navbar/>
-        {children}
+          {children}
         <Footer/>
-        </body>
+      </body>
     </html>
     </>
   );

@@ -47,6 +47,7 @@
     "simplex-noise": "^4.0.1",
     "styled-components": "^6.1.8",
     "tailwind-merge": "^2.2.2",
+    "tailwind-scrollbar": "^3.1.0",
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.163.0",
     "three-globe": "^2.31.0",

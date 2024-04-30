@@ -13,7 +13,7 @@ const Events = ({events}:{ events:Event[] }) => {
             <h1 className='font-bold font-heading'>Our Events</h1>
             <div>
               <Link href={"/events"}>
-                <button title="View all" className="text-[12px] bg-yellow-500 text-white rounded-md px-2 font-typer hover:scale-110 delay-150 transition-all">
+                <button title="View all" className="text-[12px] bg-[#f39e2f] uppercase text-white rounded-md px-2 font-typer hover:scale-110 delay-150 transition-all">
                   View all
                 </button>
               </Link>

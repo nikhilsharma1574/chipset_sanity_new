@@ -3,12 +3,9 @@ import React, { useState, useRef, useEffect } from "react";
 import { LayoutGrid } from "../../components/ui/layout-grid";
 import Camera from "@/components/Reusable/Camera";
 
-const page = () => {
+export default async function page() {
   return (
     <div className="h-screen py-20 w-full">
-      {/* <div className="flex w-full f-full justify-center items-center p-12">
-        <Camera/>
-      </div> */}
       <LayoutGrid cards={cards} />
     </div>
   );
@@ -94,4 +91,3 @@ const cards = [
   },
 ];
 
-export default page

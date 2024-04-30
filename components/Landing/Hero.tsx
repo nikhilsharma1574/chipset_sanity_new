@@ -12,7 +12,7 @@ export function Herolanding({ images}: { images: Hero[] }) {
       <motion.div initial={{ opacity: 0, y: -80, }} animate={{ opacity: 1, y: 0, }} transition={{ duration: 0.6, }} className="z-50 flex flex-col justify-center items-center">
         <motion.p data-aos="fade-down" className="font-bold text-xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
           <div className='md:text-8xl sm:text-6xl text-white'>
-            CH<span className='text-highlight text-[#f6a339]'>i</span>PSET{' '}
+            CH<span className='text-highlight text-[#f39e2f]'>i</span>PSET{' '}
           </div>
           <div className="font-heading">
             <Typewriter

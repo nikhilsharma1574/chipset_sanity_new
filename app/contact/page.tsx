@@ -1,6 +1,6 @@
 import React from 'react'
 import { Form } from '@/components/Contact/Form'
-const ContactPage = () => {
+export default async function ContactPage() {
   return (
 <>
         <div className='absolute flex justify-center items-center md:justify-start w-full'>
@@ -16,4 +16,4 @@ const ContactPage = () => {
   </>
   )
 }
-export default ContactPage
+
