@@ -44,7 +44,7 @@ const Navbar = () => {
          },
        ]
     return (
-        <section id="" className="sticky top-0 z-40 backdrop-blur ">
+        <section id="" className="sticky top-0 z-40 bg-white-900 bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-60">
             <header className="w-full p-4 md:px-10 py-8 lg:max-w-7xl lg:mx-auto flex items-center justify-between">
                 <div>
                   <Link href="/" className="flex justify-center items-center ">
@@ -74,13 +74,13 @@ const Navbar = () => {
                 </div>
                 <div className="lg:hidden transition-all">
                     <Sheet>
-                        <SheetTrigger>
+                        <SheetTrigger asChild>
                           <Menu></Menu>
                         </SheetTrigger>
-                        <SheetContent side={"right"} className="text-slate-200" >
+                        <SheetContent side={"right"} className="text-slate-200 transition-all" >
                             <SheetHeader>
                                 <SheetTitle className="text-[#f39e2f]">MENU</SheetTitle>
-                                <SheetDescription className="flex flex-col gap-4 hover:text-[#f39e2f]">
+                                <SheetDescription className="flex flex-col items-center pt-12 gap-4 hover:text-[#f39e2f]">
                                     {LINKS.map((item, idx) => {
                                         return (
                                             <Link
@@ -96,6 +96,7 @@ const Navbar = () => {
                             </SheetHeader>
                         </SheetContent>
                     </Sheet>
+
                 </div>
             </header>
         </section>

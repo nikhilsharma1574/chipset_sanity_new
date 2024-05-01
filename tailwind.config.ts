@@ -100,6 +100,8 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
         'page-load': 'pageLoad 3s ease-in-out forwards',
         'page-load-image': 'pageLoadImage .8s ease-in-out forwards'
+        
+        
       },
       scroll:
       "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",

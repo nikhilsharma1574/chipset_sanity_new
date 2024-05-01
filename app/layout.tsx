@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/layouts/Navbar";
 import Footer from "@/components/Reusable/Footer";
+
 const inter = Inter({ subsets: ["latin"] });
 import Head from "next/head";
 export const metadata: Metadata = {
@@ -21,7 +22,7 @@ Readonly<{children: React.ReactNode;}>)
       <meta name="CHIPSET | SRM UNIVERSITY RAMAPURAM" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
-    <html lang="en" className="scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar scrollbar-thumb-yellow-500 h-32 overflow-y-scroll">
+    <html lang="en" className="scrollbar-none overflow-y-scroll">
       <body className={`${inter.className}`}>
         <Navbar/>
           {children}

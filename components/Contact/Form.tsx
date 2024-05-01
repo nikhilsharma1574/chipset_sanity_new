@@ -12,14 +12,13 @@ import {
 export function Form() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // console.log("Form submitted");
   };
   return (
-    <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
-      <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
-        Welcome to Aceternity
+    <div className="max-w-md rounded-md w-full mx-auto md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
+      <h2 className="font-bold text-sm md:text-xl text-neutral-800 dark:text-neutral-200">
+        Connect with Team
       </h2>
-      <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300">
+      <p className="text-neutral-600 text-[10px] md:text-[14px] md:text-sm max-w-sm mt-2 dark:text-neutral-300">
         Login to aceternity if you can because we don&apos;t have a login flow
         yet
       </p>
@@ -27,33 +26,32 @@ export function Form() {
       <form className="my-8" onSubmit={handleSubmit}>
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
           <LabelInputContainer>
-            <Label htmlFor="firstname">First name</Label>
-            <Input id="firstname" placeholder="Tyler" type="text" />
+            <Label htmlFor="firstname" className="text-[10px] md:text-[14px]">First name</Label>
+            <Input id="firstname" placeholder="" type="text" />
           </LabelInputContainer>
           <LabelInputContainer>
-            <Label htmlFor="lastname">Last name</Label>
-            <Input id="lastname" placeholder="Durden" type="text" />
+            <Label htmlFor="lastname" className="text-[10px] md:text-[14px]">Last name</Label>
+            <Input id="lastname" placeholder="" type="text" />
           </LabelInputContainer>
         </div>
         <LabelInputContainer className="mb-4">
-          <Label htmlFor="email">Email Address</Label>
-          <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
+          <Label htmlFor="email" className="text-[10px] md:text-[14px]">Email Address</Label>
+          <Input id="email" placeholder="xxxxxx@srmist.edu.com" type="email" />
         </LabelInputContainer>
-        <LabelInputContainer className="mb-4">
-          <Label htmlFor="password">Password</Label>
-          <Input id="password" placeholder="••••••••" type="password" />
-        </LabelInputContainer>
-        <LabelInputContainer className="mb-8">
-          <Label htmlFor="twitterpassword">Your twitter password</Label>
-          <Input
-            id="twitterpassword"
-            placeholder="••••••••"
-            type="twitterpassword"
-          />
+
+        <LabelInputContainer className="mb-8 " >
+          <Label htmlFor="twitterpassword" className="text-[10px] md:text-[14px]">Your twitter password</Label>
+          {/* <Input
+            id="query"
+            placeholder="Your query"
+            type="text"/> */}
+            <textarea className="border-yellow-400 bg-slate-100 outline-none rounded-sm md:rounded-md p-2 font-typer text-[10px] md:text-[14px]" id="w3review" name="query">
+              Write your Query here
+            </textarea>
         </LabelInputContainer>
 
         <button
-          className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+          className="bg-gradient-to-br relative group/btn from-[#f39e2f] dark:from-orange-500 dark:to-orange-400 to-orange-700 block w-full text-white text-[10px] md:text-[14px] rounded-md h-8 md:h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
           type="submit"
         >
           Sign up &rarr;

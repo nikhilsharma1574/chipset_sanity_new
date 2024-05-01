@@ -32,9 +32,9 @@ const TableList: React.FC<TableListProps> = ({ notices }) => {
           <th scope="row" className="px-6 py-4 w-full font-medium  text-gray-900 whitespace-nowrap dark:text-white">
             {notice.title}
           </th>
-          <td className="px-6 py-3  cursor-pointer hover:text-[#f6a339]">
-            <Link href={notice.attachmentURL}>
-                View
+          <td className="px-6 py-3 cursor-pointer hover:text-[#f6a339]">
+            <Link href={notice.attachmentURL} className='text-[#f39e2f]'>
+                Open
             </Link>
           </td>
         </tr>

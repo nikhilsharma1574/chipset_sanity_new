@@ -9,7 +9,7 @@ const ChitsetTshirt = () => {
   
   return (
     <div className=''>
-        <video className='w-[3000px] mix-blend-multiply h-full' autoPlay muted loop>
+        <video className='rounded-md overflow-hidden w-[3000px] mix-blend-multiply h-full' autoPlay muted loop>
           <source src={"https://res.cloudinary.com/dzzvomj39/video/upload/v1714401007/Chipset_Intro_Year_2024_vbbz2d.mp4"} type="video/mp4"/>
         </video>
     </div>

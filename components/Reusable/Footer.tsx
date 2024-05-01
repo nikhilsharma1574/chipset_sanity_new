@@ -9,7 +9,7 @@ export const socialmedia=[
     {title:"Instagram" ,footer_img:'/assets/socials/instagram_footer.svg',image: '/assets/socials/instagram.png', link :'https://www.instagram.com/chipsetsrmrmp/'},
     {title:"Youtube" ,footer_img:'/assets/socials/youtube_footer.svg',image: '/assets/socials/youtube.png', link :'https://www.youtube.com/@chipsetsrmrmp5406'},
     {title:"Twitter" ,footer_img:'/assets/socials/twitter_footer.svg',image: '/assets/socials/twitter.png', link :'https://twitter.com/chipsetrmp'},
-    {title:"Mail" ,footer_img:'/assets/socials/gmail_footer.svg',image: '/assets/socials/mail.png', link :'https://www.google.com/gmail/about/'},
+    {title:"Mail" ,footer_img:'/assets/socials/gmail_footer.svg',image: '/assets/socials/mail.png', link :'mailto:chipsetrmp@gmail.com'},
     {title:"Discord" ,footer_img:'/assets/socials/discord_footer.svg',image: '/assets/socials/discord.png', link :'www.discord.com'},
   ]
   
@@ -26,19 +26,19 @@ const Footer = () => {
               <p className='font-semibold uppercase text-xs text-[#f6a339]'>A Technical Club</p>
             </div>
             </div>
-                    <ul className="flex flex-wrap items-center mb-6 text-[12px] justify-center mt-6  font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                    {/* <ul className="flex flex-wrap items-center mb-6 text-[12px] justify-center mt-6  font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
                         <li>
                             <a href="about" className="mr-4 hover:underline md:mr-6 ">About</a>
                         </li>
                         <li>
                             <a href="contact" className="hover:underline">Contact</a>
                         </li>
-                    </ul>
+                    </ul> */}
                 </div>
                 <div className='flex flex-1 px-4 justify-center items-center'>
                 {
             socialmedia.map((socials,index)=>(
-                <div key={index} className='flex'>
+                <div key={index} className='flex '>
                     <Round_icons {...socials}/>
                  </div>   
             ))}

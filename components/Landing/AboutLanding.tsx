@@ -18,7 +18,7 @@ const aboutLanding = () => {
                   <div className='2 md:hidden flex-1 my-6 flex justify-center items-center '>
                     <div data-aos="fade-left">
                     <div className="player-wrapper">
-                      <video className='w-[3000px] mix-blend-multiply h-full' autoPlay muted loop>
+                      <video className='rounded-md overflow-hidden w-[3000px] mix-blend-multiply h-full' autoPlay muted loop>
                         <source src={"https://res.cloudinary.com/dzzvomj39/video/upload/v1714401007/Chipset_Intro_Year_2024_vbbz2d.mp4"} type="video/mp4"/>
                       </video>
                     </div>
