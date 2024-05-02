@@ -21,7 +21,6 @@ export default async function about() {
                     <div className='2 md:hidden flex-1 my-6 flex justify-center items-center'>
                       <video className='w-[3000px] mix-blend-multiply h-full rounded-md overflow-hidden' autoPlay muted loop>
                         <source src={"https://res.cloudinary.com/dzzvomj39/video/upload/v1714401007/Chipset_Intro_Year_2024_vbbz2d.mp4"} type="video/mp4"/>
-                        {/* https://res.cloudinary.com/ddeqh8bh3/video/upload/v1696062328/ogaxbzjyfd0bhhjgm7xg.mp4 */}
                       </video>
                     </div>
                     <p className='font-typer text-xs md:text-[10px] lg:text-[13px] lg:text-md md:mt-4 lg:font-bold'>CHiPSET is a Collaboration of Hackers, Innovators, Programmers, Script writers, Entrepreuners, and Technocrats. We are a non-profit organization with a zeal for making changes in the world by harvesting talents of unique individuals cross all domains.We believe in building the world by building it’s forever recurring addition; a family of inquisitive minds.</p>

@@ -4,6 +4,7 @@ import Image from 'next/image';
 import commingSoon from "../../public/assets/LandingLogos/commingSoon.png"
 import { Suspense } from 'react';
 import PageLoader from '@/components/Reusable/PageLoader';
+import PairSitting from '@/components/Reusable/PairSitting';
 export type Members={
   _id :string;
   title: string,
@@ -18,14 +19,16 @@ export default async function team() {
   return (
     <>
     <Suspense fallback={<PageLoader/>}>
-      <div className='absolute flex justify-center items-center md:justify-start w-full'>
+      <div className='flex justify-center items-center w-full'>
         <h1 className='p-12 font-typer text-xl font-bold'>
           COMMING SOON
         </h1>
       </div>
-      <div className='relative flex justify-center items-center w-full h-screen md:h-full'>
-        <Image src={commingSoon} height={2000} width={2000} className=' transition-all h-[340px] object-cover md:h-[500px] md:w-full' alt='logo'/>
-      </div>
+      <div className='flex p-12 w-full mb-12 h-full flex-1 justify-center'>
+          <div data-aos="fade-left" className=''>
+            <PairSitting/>
+          </div>
+        </div>
     </Suspense>
     </>
   )

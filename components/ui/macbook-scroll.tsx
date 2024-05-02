@@ -61,8 +61,8 @@ export const MacbookScroll = ({
     [0, 0.3],
     [0.6, isMobile ? 1 : 1.5]
   );
-  const translatemob = useTransform(scrollYProgress, [0, 1], [0, 1700]);
-  const translatedesktop = useTransform(scrollYProgress, [0, 1], [0, 2000]);
+  const translatemob = useTransform(scrollYProgress, [0, 1], [0, 1200]);
+  const translatedesktop = useTransform(scrollYProgress, [0, 1], [1, 1600]);
   const rotate = useTransform(scrollYProgress, [0.1, 0.12, 0.3], [-28, -28, 0]);
   const textTransform = useTransform(scrollYProgress, [0, 0.3], [0, 100]);
   const textOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
@@ -176,8 +176,11 @@ export const Lid = ({
           src={src as string}
           alt="aceternity logo"
           fill
-          className="object-cover object-left-top absolute rounded-lg inset-0 h-full w-full"
+          className="md:hidden object-cover object-left-top absolute rounded-lg inset-0 h-full w-full"
         />
+        <video className='object-contain hidden md:flex justify-center items-center bg-black absolute rounded-lg inset-0 h-full w-full' autoPlay muted loop>
+          <source src={"https://res.cloudinary.com/dzzvomj39/video/upload/v1714401007/Chipset_Intro_Year_2024_vbbz2d.mp4"} type="video/mp4"/>
+        </video>
       </motion.div>
     </div>
   );

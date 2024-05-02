@@ -22,8 +22,17 @@ const AllComponents = ({slideshow,events}:{slideshow:Hero[] , events:Event[]}) =
       <PageLoader />
       <div className="flex min-h-screen h-full w-full flex-col items-center overflow-hidden justify-between ">
         <Herolanding images={slideshow}/>
+        
+        <div className='hidden md:flex w-full'>
+          <Macbook/>
+        </div>
+        
         <AboutLanding/>
-        <Macbook/>
+
+        <div className='md:hidden'>
+          <Macbook/>
+        </div>
+        
         <Analytics/>
         <Events events={events}/>
         
