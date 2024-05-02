@@ -10,15 +10,13 @@ import { WavyBackground } from '@/components/ui/wavy-background';
     const events = await sanityFetch<Event[]>({query:eventsQuery});
   return (
     <>
-    {/* <WavyBackground className="max-w-4xl mx-auto pb-40"> */}
-    <div className='w-full '>
+    {/* <div className='w-full '>
       <div className='flex items-center justify-center '>
         <video className='-z-50 w-[700px] h-full rounded-md overflow-hidden md:my-20' autoPlay muted loop>
           <source src={"https://res.cloudinary.com/ddeqh8bh3/video/upload/v1696062328/ogaxbzjyfd0bhhjgm7xg.mp4"} type="video/mp4"/>
         </video>
       </div>
-    </div>
-    {/* </WavyBackground>         */}
+    </div> */}
         <div className="w-full h-full flex flex-col md:p-12 p-6"> 
         <div className=' mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-12'>
         {

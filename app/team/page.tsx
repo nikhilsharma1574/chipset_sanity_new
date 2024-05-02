@@ -20,7 +20,7 @@ export default async function team() {
     <>
     <Suspense fallback={<PageLoader/>}>
       <div className='flex justify-center items-center w-full'>
-        <h1 className='p-12 font-typer text-xl font-bold'>
+        <h1 className='p-12 font-typer text-xl md:text-4xl animate-pulse font-bold'>
           COMMING SOON
         </h1>
       </div>
