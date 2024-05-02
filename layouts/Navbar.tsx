@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -11,8 +12,12 @@ import {
     SheetTrigger,
 } from "@/components/ui/sheet";
 import { Menu } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
+
+  const pathname = usePathname();
+  console.log(pathname === "/notice")
   const LINKS = [
          {
            label: "Home",
@@ -63,9 +68,9 @@ const Navbar = () => {
                     {LINKS.map((item, idx) => {
                         return (
                             <Link
-                                key={idx}
-                                href={item.link}
-                                className="text-black transition-all hover:text-[#f39e2f] duration-300"
+                            key={idx}
+                            href={item.link}
+                            className={`transition-all ${pathname === item.link ? "text-[#f39e2f]" : "text-black"} hover:text-[#f39e2f] duration-300`}
                             >
                                 {item.label}
                             </Link>

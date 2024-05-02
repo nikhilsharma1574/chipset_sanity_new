@@ -9,7 +9,7 @@ export default async function about() {
   // await new Promise(resolve=>setTimeout(resolve,3000))
   
   return (
-    <div>
+    <div className="overflow-hidden">
       <Suspense fallback={<PageLoader />}>
         <div className='w-full p-1 md:p-6 flex flex-col'>
         <div className='flex flex-col'>
