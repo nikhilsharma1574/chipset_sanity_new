@@ -10,14 +10,14 @@ const Analytics = () => {
             <h1 className='font-heading text-[#f39e2f] font-bold uppercase text-xl md:text-4xl lg:text-6xl'>Team of enterprise</h1>
           </div>
           <div className='font-typer w-full items-center justify-center grid gap-10 md:grid-cols-4 sm:grid-cols-1 text-white object-contain'>
-            <div className='flex flex-col justify-center items-center'><p className='text-[#f39e2f] font-light'><CountUp  enableScrollSpy end={18} duration={4}/>+</p><p className='md:text-2xl lg:text-4xl text-lg font-medium md:font-bold'>EVENTS</p></div>
-            <div className='flex flex-col justify-center items-center'><p className='text-[#f39e2f] font-light'><CountUp  enableScrollSpy end={24} duration={4}/>+</p><p className='md:text-2xl lg:text-4xl text-lg font-medium md:font-bold'>WEBINARS</p></div>
+            <div className='flex flex-col justify-center items-center'><p className='text-[#f39e2f] font-light'><CountUp  enableScrollSpy end={25} duration={4}/>+</p><p className='md:text-2xl lg:text-4xl text-lg font-medium md:font-bold'>EVENTS</p></div>
+            <div className='flex flex-col justify-center items-center'><p className='text-[#f39e2f] font-light'><CountUp  enableScrollSpy end={32} duration={4}/>+</p><p className='md:text-2xl lg:text-4xl text-lg font-medium md:font-bold'>WEBINARS</p></div>
             <div className='flex flex-col justify-center items-center'><p className='text-[#f39e2f] font-light'><CountUp  enableScrollSpy end={900} duration={4}/>+</p><p className='md:text-2xl lg:text-4xl text-lg font-medium md:font-bold'>STUDENTS</p></div>
-            <div className='flex flex-col justify-center items-center'><p className='text-[#f39e2f] font-light'><CountUp  enableScrollSpy end={12} duration={4}/>+</p><p className='md:text-2xl lg:text-4xl text-lg font-medium md:font-bold'>MENTORS</p></div>
+            <div className='flex flex-col justify-center items-center'><p className='text-[#f39e2f] font-light'><CountUp  enableScrollSpy end={48} duration={4}/>+</p><p className='md:text-2xl lg:text-4xl text-lg font-medium md:font-bold'>MENTORS</p></div>
           </div>
           <div className='flex text-center justify-center items-center text-white text-xs md:text-lg lg:text-xl'>
             <p className="font-typer">
-              <span className="text-[#f39e2f]">Longest</span> standing club of SRM Ramapuram
+              <span className="text-[#f39e2f]"> + </span>STILL COUNTING
             </p>
           </div>
         </div>

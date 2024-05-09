@@ -31,7 +31,6 @@ const AllComponents = ({slideshow,events}:{slideshow:Hero[] , events:Event[]}) =
         </div>
         <Analytics/>
         <Events events={events}/>
-        
       </div>
     </main>
   )

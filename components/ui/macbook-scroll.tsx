@@ -49,8 +49,14 @@ export const MacbookScroll = ({
         setIsMobile(true);
       }
     }, []);
+    
+    const [islarge, setIsLarge] = useState(false);
+    useEffect(() => {
+      if (window && window.innerWidth < 1440) {
+        setIsLarge(true);
+      }
+    }, []);
   
-
   const scaleX = useTransform(
     scrollYProgress,
     [0, 0.3],
@@ -63,6 +69,7 @@ export const MacbookScroll = ({
   );
   const translatemob = useTransform(scrollYProgress, [0, 1], [0, 1200]);
   const translatedesktop = useTransform(scrollYProgress, [0, 1], [1, 1600]);
+  const translatelarge = useTransform(scrollYProgress, [0, 1], [1, 2400]);
   const rotate = useTransform(scrollYProgress, [0.1, 0.12, 0.3], [-28, -28, 0]);
   const textTransform = useTransform(scrollYProgress, [0, 0.3], [0, 100]);
   const textOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
@@ -91,7 +98,7 @@ export const MacbookScroll = ({
         scaleX={scaleX}
         scaleY={scaleY}
         rotate={rotate}
-        translatemob={isMobile ? translatemob : translatedesktop}
+        translatemob={isMobile ? translatemob : islarge ? translatelarge : translatedesktop}
       />
       {/* Base area */}
       <div className="h-[22rem] w-[32rem] bg-gray-200 dark:bg-[#272729] rounded-2xl overflow-hidden relative -z-10">
