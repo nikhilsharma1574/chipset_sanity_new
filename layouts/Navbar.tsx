@@ -84,7 +84,7 @@ const Navbar = () => {
                         </SheetTrigger>
                         <SheetContent side={"right"} className="text-slate-200 transition-all" >
                             <SheetHeader>
-                                <SheetTitle className="text-[#f39e2f]">MENU</SheetTitle>
+                              <SheetTitle className="text-[#f39e2f]">MENU</SheetTitle>
                                 <SheetDescription className="flex flex-col items-center pt-12 gap-4 hover:text-[#f39e2f]">
                                     {LINKS.map((item, idx) => {
                                         return (
@@ -101,7 +101,6 @@ const Navbar = () => {
                             </SheetHeader>
                         </SheetContent>
                     </Sheet>
-
                 </div>
             </header>
         </section>

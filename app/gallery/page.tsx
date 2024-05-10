@@ -17,7 +17,7 @@ export default async function page() {
           <div className="h-full ">
             <div className="font-heading text-center flex text-4xl md:text-6xl lg:text-8xl font-semibold text-[#f39e2f] md:m-12">
               <h1 className="text-center w-full">
-                NOTICE BOARD
+                GALLERY
               </h1>
             </div>
             <div>
