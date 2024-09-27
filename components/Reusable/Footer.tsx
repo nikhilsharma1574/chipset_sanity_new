@@ -47,7 +47,7 @@ const Footer = () => {
                 <div className='flex flex-1 justify-center'>
                   <div>
                     <span className="block text-[9px] md:text-[12px] justify-center text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="" className="hover:underline">CHiPSET</a>. All Rights Reserved.</span>
-                    <span className="block text-[9px] md:text-[12px] justify-center text-gray-500 sm:text-center dark:text-gray-400">Developer - Nikhil Sharma and Asish <Link className='hover:underline font-bold' href="https://www.linkedin.com/in/nikhilshaarrma/"> Contact </Link></span>
+                    <span className="block text-[9px] md:text-[12px] justify-center text-gray-500 sm:text-center dark:text-gray-400">Developer - Nikhil Sharma<Link className='hover:underline font-bold' href="https://www.linkedin.com/in/nikhilshaarrma/"> Contact </Link></span>
                   </div>
                 </div>
             </div>
