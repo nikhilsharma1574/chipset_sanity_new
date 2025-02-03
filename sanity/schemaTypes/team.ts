@@ -1,4 +1,4 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity';
 
 export default defineType({
   name: 'team',
@@ -20,28 +20,30 @@ export default defineType({
       },
     }),
     defineField({
-        name: 'members',
-        title: 'members',
-        type: 'array',
-        of: [
-          {
-            type: 'object',
-            fields: [
-              {
-                type: 'image',
-                name: 'image',
-                title: 'Image'
+      name: 'members',
+      title: 'members',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {
+              type: 'image', // Corrected to 'image'
+              name: 'image',
+              title: 'Image',
+              options: {
+                hotspot: true, // Optional: Enable hotspot for image cropping
               },
-              {
-                type: 'string',
-                name: 'name',
-                title: 'Name'
-              }
-            ]
-          }
-        ]
-      })
-      ,
+            },
+            {
+              type: 'string',
+              name: 'name',
+              title: 'Name',
+            },
+          ],
+        },
+      ],
+    }),
   ],
   preview: {
     select: {
@@ -49,4 +51,4 @@ export default defineType({
       media: 'mainImage',
     },
   },
-})
+});

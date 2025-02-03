@@ -5,6 +5,7 @@ import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
 import { Event } from '@/app/page';
 
 const EventCard = ({events}:{events:Event}) => {
+  // console.log(events.mainImage)
   return (
     <>
     <div data-aos="fade-up">

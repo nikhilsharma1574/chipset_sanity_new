@@ -30,8 +30,23 @@ export type Notice={
   attachmentURL:string
 }
 
+export type TeamMembers={
+  _id :string;
+  title: string,
+  desc:string,
+  // attachmentURL:string
+}
+
+export type Members={
+  _id :string;
+  title: string,
+  desc: string,
+  members: object,
+  github_link: string,
+  live_link: string
+}
+
 export default async function Home() {
-  // await new Promise(resolve=>setTimeout(resolve,3000))
 
   const slideshow = await sanityFetch<Hero[]>({query:heroQuery});
   const events = await sanityFetch<Event[]>({query:eventsQuery});
