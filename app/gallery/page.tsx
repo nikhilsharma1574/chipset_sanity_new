@@ -13,7 +13,7 @@ export type Gallery = {
 export default async function page() {
   const gallery = await sanityFetch<Gallery[]>({query:galleryQuery});
   const urls: string[] = gallery[0].mainImage.map((item: { url: string; }) => item.url);
-  console.log(urls)
+  // console.log(urls)
   return (
           <div className="h-full ">
             <div className="font-heading text-center flex text-4xl md:text-6xl lg:text-8xl font-semibold text-[#f39e2f] md:m-12">

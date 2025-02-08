@@ -12,6 +12,7 @@ export type Members = {
   members: {
     _key: string;
     name: string;
+    role: string;
     image?: {
       _type: 'image';
       asset: {
@@ -32,9 +33,9 @@ export default async function Team() {
     <>
       <Suspense fallback={<PageLoader />}>
         <div className="flex justify-center items-center w-full">
-          <h1 className="font-typer text-2xl md:text-4xl font-bold">
+          {/* <h1 className="font-typer text-2xl md:text-4xl font-bold">
             CHIPSET TEAM
-          </h1>
+          </h1> */}
         </div>
         <div className="flex lg:pr-12 lg:pb-12 lg:pl-12 pt-0 w-full mb-12 h-full flex-1 justify-center">
           <div data-aos="fade-left" className="w-full p-2 lg:p-12">
@@ -44,12 +45,14 @@ export default async function Team() {
                 <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 justify-center items-center gap-y-6 gap-x-3">
                   {team.members?.map((member) => {
                     const imageUrl = member.image ? urlForImage(member.image) : null;
+                    // console.log(member.role)
                     return (
                       <Team_Profile
                         key={member._key}
                         name={member.name}
                         img={imageUrl || ''}
                         batch={team.title} 
+                        role={member.role || ''}
                       />
                     );
                   })}

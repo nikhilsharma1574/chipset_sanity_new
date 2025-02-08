@@ -17,7 +17,7 @@ import { usePathname } from 'next/navigation';
 const Navbar = () => {
 
   const pathname = usePathname();
-  console.log(pathname === "/notice")
+  // console.log(pathname === "/notice")
   const LINKS = [
          {
            label: "Home",

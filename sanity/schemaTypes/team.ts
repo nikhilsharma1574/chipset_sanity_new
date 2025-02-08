@@ -21,14 +21,14 @@ export default defineType({
     }),
     defineField({
       name: 'members',
-      title: 'members',
+      title: 'Members',
       type: 'array',
       of: [
         {
           type: 'object',
           fields: [
             {
-              type: 'image', // Corrected to 'image'
+              type: 'image',
               name: 'image',
               title: 'Image',
               options: {
@@ -39,6 +39,11 @@ export default defineType({
               type: 'string',
               name: 'name',
               title: 'Name',
+            },
+            {
+              type: 'string', // Add a new field for the role
+              name: 'role',
+              title: 'Role',
             },
           ],
         },

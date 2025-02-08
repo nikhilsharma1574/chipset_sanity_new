@@ -18,13 +18,12 @@ export default async function about() {
             <div data-aos="slide-up" className='slide1 flex flex-1 flex-col md:flex-row'>
               <div className='left flex flex-1 md:p-6 '>
                 <div className='text-black font-heading uppercase font-extrabold md:text-2xl flex justify-center items-center w-full h-full'>
-                  How ot Started
+                <Timeline/>
                 </div>
               </div>
               <div data-aos="fade-left" className='right  flex-1 my-6 md:flex justify-center items-center'>
-                  {/* <ChitsetTshirt/> */}
                   <video className='w-[3000px] mix-blend-multiply h-full rounded-md overflow-hidden' autoPlay muted loop>
-                    <source src={"https://res.cloudinary.com/dzzvomj39/video/upload/v1714655870/Chipset_Intro_year_2019_hynpsl.mp4"} type="video/mp4"/>
+                    <source src={"https://res.cloudinary.com/ddu9vj21v/video/upload/v1738934976/hfmdhwbnki9o0gjgsjy1.mp4"} type="video/mp4"/>
                   </video>
               </div>
             </div>
@@ -36,18 +35,22 @@ export default async function about() {
                 </div>
               </div>
               <div data-aos="fade-left" className='right  flex-1 my-6 md:flex justify-center items-center'>
-                  <ChitsetTshirt/>
+              <video className='w-[3000px] mix-blend-multiply h-full rounded-md overflow-hidden' autoPlay muted loop>
+                    <source src={"https://res.cloudinary.com/dzzvomj39/video/upload/v1714655870/Chipset_Intro_year_2019_hynpsl.mp4"} type="video/mp4"/>
+                  </video>
               </div>
             </div>
 
             <div data-aos="slide-up" className='slide1 flex flex-1 flex-col md:flex-row'>
               <div className='left flex flex-1 md:p-6 '>
                 <div className='text-black scale-75 md:scale-100 font-heading uppercase font-extrabold text-2xl flex justify-center items-center w-full h-full'>
-                  <Timeline/>
+                  How it Started
                 </div>
               </div>
               <div data-aos="fade-left" className='right  flex-1 my-6 md:flex justify-center items-center'>
-                  <ChitsetTshirt/>
+              <video className='w-[3000px] mix-blend-multiply h-full rounded-md overflow-hidden' autoPlay muted loop>
+                    <source src={"https://res.cloudinary.com/dzzvomj39/video/upload/v1714401482/ogaxbzjyfd0bhhjgm7xg_gdi0dq.mp4"} type="video/mp4"/>
+                  </video>
               </div>
             </div>
 
@@ -59,12 +62,10 @@ export default async function about() {
               </div>
               <div data-aos="fade-left" className='right  flex-1 my-6 md:flex justify-center items-center'>
               <video className='w-[3000px] mix-blend-multiply h-full rounded-md overflow-hidden' autoPlay muted loop>
-                <source src={"https://res.cloudinary.com/dzzvomj39/video/upload/v1714401482/ogaxbzjyfd0bhhjgm7xg_gdi0dq.mp4"} type="video/mp4"/>
+                <source src={"https://res.cloudinary.com/ddu9vj21v/video/upload/v1738935244/VID-20250206-WA0028_ar7yku.mp4"} type="video/mp4"/>
               </video>
               </div>
             </div>
-
-
         </div>
         </div>
         </div>

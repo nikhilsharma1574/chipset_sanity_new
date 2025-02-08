@@ -73,7 +73,7 @@ export const MacbookScroll = ({
   const rotate = useTransform(scrollYProgress, [0.1, 0.12, 0.3], [-28, -28, 0]);
   const textTransform = useTransform(scrollYProgress, [0, 0.3], [0, 100]);
   const textOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
-  console.log("isMobile",isMobile   )
+  // console.log("isMobile",isMobile   )
   return (
     <div
       ref={ref}
