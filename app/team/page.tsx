@@ -32,16 +32,16 @@ export default async function Team() {
     <>
       <Suspense fallback={<PageLoader />}>
         <div className="flex justify-center items-center w-full">
-          <h1 className="font-typer text-xl md:text-4xl font-bold">
+          <h1 className="font-typer text-2xl md:text-4xl font-bold">
             CHIPSET TEAM
           </h1>
         </div>
-        <div className="flex pr-12 pb-12 pl-12 pt-0 w-full mb-12 h-full flex-1 justify-center">
-          <div data-aos="fade-left" className="w-full p-12">
+        <div className="flex lg:pr-12 lg:pb-12 lg:pl-12 pt-0 w-full mb-12 h-full flex-1 justify-center">
+          <div data-aos="fade-left" className="w-full p-2 lg:p-12">
             {teamMembers?.map((team) => (
-              <div key={team._id} data-aos="fade-up" className='my-12'>
-                <h2 className="text-2xl font-bold mb-4">{team.title}</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 justify-center items-center gap-y-6 gap-x-3">
+              <div key={team._id} data-aos="fade-up" className='my-12 bg-gree'>
+                <h2 className="text-lg lg:text-2xl font-bold mb-4 ">{team.title}</h2>
+                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 justify-center items-center gap-y-6 gap-x-3">
                   {team.members?.map((member) => {
                     const imageUrl = member.image ? urlForImage(member.image) : null;
                     return (
