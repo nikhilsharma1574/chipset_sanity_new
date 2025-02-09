@@ -19,7 +19,7 @@ export function Form() {
       });
   
       if (response.ok) {
-        alert("✅ Message sent successfully!"); // Show success message
+        alert("✅ Your Query has been sent to our team, we will respond to you shortly !"); // Show success message
         e.currentTarget.reset(); // Clear form after submission
       }
     } catch (error) {
