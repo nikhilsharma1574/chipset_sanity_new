@@ -3,16 +3,31 @@ import React from "react";
 import { Label } from "../ui/label";
 import { Input } from "../ui/input";
 import { cn } from "@/utils/cn";
-import {
-  IconBrandGithub,
-  IconBrandGoogle,
-  IconBrandOnlyfans,
-} from "@tabler/icons-react";
 
 export function Form() {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault(); // Prevent page reload
+  
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData.entries());
+  
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+  
+      if (response.ok) {
+        alert("✅ Your Query has been sent to our team, we will respond to you shortly !"); // Show success message
+        e.currentTarget.reset(); // Clear form after submission
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      // ❌ Removed the alert("⚠️ Something went wrong!") to avoid extra popups
+    }
   };
+
   return (
     <div className="max-w-md rounded-md w-full mx-auto md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
       <h2 className="font-bold text-sm md:text-xl text-neutral-800 dark:text-neutral-200">
@@ -21,49 +36,57 @@ export function Form() {
       <p className="text-neutral-600 text-[10px] md:text-[14px] md:text-sm max-w-sm mt-2 dark:text-neutral-300">
         Chipset
       </p>
-      <form className="my-8"  action="https://formsubmit.co/el/chipsetrmp@gmail.com" method="POST">
+
+      {/* ✅ Single Form (No Nested Forms) */}
+      <form className="my-8" onSubmit={handleSubmit}>
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
           <LabelInputContainer>
-            <Label htmlFor="firstname" className="text-[10px] md:text-[14px]">First name</Label>
-            <Input id="firstname" placeholder="" type="text" />
+            <Label htmlFor="firstname" className="text-[10px] md:text-[14px]">
+              First name
+            </Label>
+            <Input id="firstname" name="firstname" type="text" required />
           </LabelInputContainer>
           <LabelInputContainer>
-            <Label htmlFor="lastname" className="text-[10px] md:text-[14px]">Last name</Label>
-            <Input id="lastname" placeholder="" type="text" />
+            <Label htmlFor="lastname" className="text-[10px] md:text-[14px]">
+              Last name
+            </Label>
+            <Input id="lastname" name="lastname" type="text" required />
           </LabelInputContainer>
         </div>
         <LabelInputContainer className="mb-4">
-          <Label htmlFor="email" className="text-[10px] md:text-[14px]">Email Address</Label>
-          <Input placeholder="xxxxxx@srmist.edu.com" type="email" />
+          <Label htmlFor="email" className="text-[10px] md:text-[14px]">
+            Email Address
+          </Label>
+          <Input
+            id="email"
+            name="email"
+            placeholder="xxxxxx@srmist.edu.com"
+            type="email"
+            required
+          />
         </LabelInputContainer>
-        <LabelInputContainer className="mb-8 " >
-          <Label htmlFor="twitterpassword" className="text-[10px] md:text-[14px]">Your twitter password</Label>
-            <textarea dirName="Message" className="border-yellow-400 bg-slate-100 outline-none rounded-sm md:rounded-md p-2 font-typer text-[10px] md:text-[14px]" id="w3review" name="query">
-              Write your Query here
-            </textarea>
+        <LabelInputContainer className="mb-8">
+          <Label htmlFor="query" className="text-[10px] md:text-[14px]">
+            Your Query
+          </Label>
+          <textarea
+            id="query"
+            name="query"
+            className="border-yellow-400 bg-slate-100 outline-none rounded-sm md:rounded-md p-2 font-typer text-[10px] md:text-[14px]"
+            placeholder="Write your query here..."
+            required
+          />
         </LabelInputContainer>
         <button
-          className="bg-gradient-to-br relative group/btn from-[#f39e2f] dark:from-orange-500 dark:to-orange-400 to-orange-700 block w-full text-white text-[10px] md:text-[14px] rounded-md h-8 md:h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+          className="bg-gradient-to-br relative group/btn from-[#f39e2f] dark:from-orange-500 dark:to-orange-400 to-orange-700 block w-full text-white text-[10px] md:text-[14px] rounded-md h-8 md:h-10 font-medium"
           type="submit"
         >
-          Sign up &rarr;
-          <BottomGradient />
+          Submit &rarr;
         </button>
-
       </form>
-        {/* <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" /> */}
     </div>
   );
 }
-
-const BottomGradient = () => {
-  return (
-    <>
-      <span className="group-hover/btn:opacity-100 block transition duration-500 opacity-0 absolute h-px w-full -bottom-px inset-x-0 bg-gradient-to-r from-transparent via-yellow-500 to-transparent" />
-      <span className="group-hover/btn:opacity-100 blur-sm block transition duration-500 opacity-0 absolute h-px w-1/2 mx-auto -bottom-px inset-x-10 bg-gradient-to-r from-transparent via-orange-500 to-transparent" />
-    </>
-  );
-};
 
 const LabelInputContainer = ({
   children,
