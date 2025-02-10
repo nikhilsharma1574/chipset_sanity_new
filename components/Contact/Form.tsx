@@ -3,28 +3,45 @@ import React from "react";
 import { Label } from "../ui/label";
 import { Input } from "../ui/input";
 import { cn } from "@/utils/cn";
+import Swal from "sweetalert2"; // ✅ Import SweetAlert2
 
 export function Form() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault(); // Prevent page reload
-  
+
     const formData = new FormData(e.currentTarget);
     const data = Object.fromEntries(formData.entries());
-  
+
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
-  
+
       if (response.ok) {
-        alert("✅ Your Query has been sent to our team, we will respond to you shortly !"); // Show success message
+        // ✅ Show a beautiful success popup
+        Swal.fire({
+          title: "Success!",
+          text: "Your Query has been sent to our team. We will respond shortly!",
+          icon: "success",
+          confirmButtonColor: "#f39e2f",
+          confirmButtonText: "OK",
+        });
+
         e.currentTarget.reset(); // Clear form after submission
       }
     } catch (error) {
       console.error("Error:", error);
-      // ❌ Removed the alert("⚠️ Something went wrong!") to avoid extra popups
+
+      // ❌ Show a proper error popup instead of console logs
+      Swal.fire({
+        title: "Oops!",
+        text: "Something went wrong. Please try again later.",
+        icon: "error",
+        confirmButtonColor: "#ff4d4d",
+        confirmButtonText: "Close",
+      });
     }
   };
 
