@@ -1,15 +1,20 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react"; // ✅ Import useRef
 import { Label } from "../ui/label";
 import { Input } from "../ui/input";
 import { cn } from "@/utils/cn";
 import Swal from "sweetalert2"; // ✅ Import SweetAlert2
 
 export function Form() {
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault(); // Prevent page reload
+  const formRef = useRef<HTMLFormElement>(null); // ✅ Store reference to form
 
-    const formData = new FormData(e.currentTarget);
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault(); // ✅ Prevent page reload
+
+    const form = formRef.current;
+    if (!form) return; // ✅ Ensure form exists
+
+    const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
 
     try {
@@ -20,28 +25,14 @@ export function Form() {
       });
 
       if (response.ok) {
-        // ✅ Show a beautiful success popup
-        Swal.fire({
-          title: "Success!",
-          text: "Your Query has been sent to our team. We will respond shortly!",
-          icon: "success",
-          confirmButtonColor: "#f39e2f",
-          confirmButtonText: "OK",
-        });
-
-        e.currentTarget.reset(); // Clear form after submission
+        Swal.fire("✅ Success!", "Your Query has been sent to our team, we will respond to you shortly!", "success");
+        form.reset(); // ✅ Reset form after success
+      } else {
+        Swal.fire("❌ Failed!", "Your Query was not sent. Try again!", "error");
       }
     } catch (error) {
       console.error("Error:", error);
-
-      // ❌ Show a proper error popup instead of console logs
-      Swal.fire({
-        title: "Oops!",
-        text: "Something went wrong. Please try again later.",
-        icon: "error",
-        confirmButtonColor: "#ff4d4d",
-        confirmButtonText: "Close",
-      });
+      Swal.fire("❌ Error!", `An error occurred: ${error.message || "Unknown error"}`, "error");
     }
   };
 
@@ -55,7 +46,7 @@ export function Form() {
       </p>
 
       {/* ✅ Single Form (No Nested Forms) */}
-      <form className="my-8" onSubmit={handleSubmit}>
+      <form ref={formRef} className="my-8" onSubmit={handleSubmit}>
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
           <LabelInputContainer>
             <Label htmlFor="firstname" className="text-[10px] md:text-[14px]">
