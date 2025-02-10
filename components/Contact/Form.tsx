@@ -32,9 +32,13 @@ export function Form() {
       }
     } catch (error) {
       console.error("Error:", error);
-      Swal.fire("❌ Error!", `An error occurred: ${error.message || "Unknown error"}`, "error");
+
+      // ✅ Fix: Ensure `error` has a `.message` property
+      const errMessage = error instanceof Error ? error.message : "Unknown error";
+
+      Swal.fire("❌ Error!", `An error occurred: ${errMessage}`, "error");
     }
-  };
+  }; // ✅ Closing the function properly
 
   return (
     <div className="max-w-md rounded-md w-full mx-auto md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
@@ -96,6 +100,7 @@ export function Form() {
   );
 }
 
+// ✅ This function should not be inside `Form`
 const LabelInputContainer = ({
   children,
   className,
