@@ -48,7 +48,7 @@
     "sanity": "^3.33.0",
     "sharp": "^0.33.2",
     "simplex-noise": "^4.0.1",
-    "styled-components": "^6.1.8",
+    "styled-components": "^6.1.15",
     "sweetalert2": "^11.16.0",
     "tailwind-merge": "^2.6.0",
     "tailwind-scrollbar": "^3.1.0",
