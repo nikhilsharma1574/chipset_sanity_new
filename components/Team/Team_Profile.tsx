@@ -9,7 +9,7 @@ type Team = {
 };
 const Team_Profile: React.FC<Team> = ({ name, batch, img , role }) => {
   return (
-    <div className="p-2 lg:p-8 rounded-lg shadow-md hover:scale-110 transition-all delay-75 bg-gray-200 w-full">
+    <div className="font-heading p-2 lg:p-8 rounded-lg shadow-md hover:scale-110 transition-all delay-75 bg-gray-200 w-full">
       <div className='w-full rounded-md flex justify-center'>
         <Image src={img} alt={name} height={100} width={100} className="m-2 shadow-input shadow-black h-16 w-16 items-center justify-center lg:h-24 lg:w-24 object-cover rounded-full" />
       </div>

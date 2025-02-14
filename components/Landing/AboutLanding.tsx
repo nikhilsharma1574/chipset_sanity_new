@@ -2,13 +2,19 @@
 import React from 'react'
 import ManSitting from '../Reusable/ManSitting';
 import PairSitting from '../Reusable/PairSitting';
+import { FlipWords } from '../ui/flip-words';
 
 const aboutLanding = () => {
   return (
     <>
     <div className='w-full'>
-      <div className='p-6 md:text-4xl w-full font-bold text-xl lg:text-[50px] md:font-semibold md:px-24 md:py-12'>
-        <p data-aos="fade-right" className=''><span className='font-heading'>What is</span> CH<span className='text-[#f6a339]'>i</span>PSET</p>
+      <div className='p-6 md:text-4xl w-full font-bold text-xl lg:text-[50px] md:font-semibold md:px-24 md:py-12 font-heading'>
+        <p className='leading-[70px]'>
+          <p className='font-extralight'>
+            That what <span data-aos="fade-right" className='font-extrabold'>CH<span className='text-[#f6a339]'>i</span>PSET</span> is more than just a name !!
+          </p>
+          Built <FlipWords duration={300} className=' text-[#f6a339] font-extralight' words={["Better", "Unique", "Innovative", "Creative", "Collaborative", "Technical", "Advanced","Networking"]}/>,<br/>
+        </p>
       </div>
       <div className='flex flex-col md:flex-row h-full px-8 text-justify mt-6'>
         <div className='flex flex-col justify-start w-full h-full flex-1 items-center text-black'>
