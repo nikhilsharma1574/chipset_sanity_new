@@ -57,7 +57,7 @@ export default async function about() {
             <div data-aos="slide-up" className='slide1 flex flex-1 flex-col md:flex-row-reverse'>
               <div className='left flex flex-1 md:p-6 '>
                 <div className='text-black font-heading uppercase font-extrabold md:text-2xl flex justify-center items-center w-full h-full'>
-                  Our Events
+                  what we are
                 </div>
               </div>
               <div data-aos="fade-left" className='right  flex-1 my-6 md:flex justify-center items-center'>
