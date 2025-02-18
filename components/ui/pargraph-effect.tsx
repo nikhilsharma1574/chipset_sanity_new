@@ -30,13 +30,14 @@ const Wrapper = styled.div`
     max-width: 600px; /* increased width for more text */
     margin: 0 auto; /* center the card */
     perspective: 1000px;
+    padding-bottom: 20px;
   }
 
   .card {
     width: 100%;
     min-height: 300px; /* minimum height, but can grow */
     border-radius: 50px;
-    background: linear-gradient(135deg, rgb(255, 255, 0) 0%, rgb(255, 215, 0) 100%);
+    background: linear-gradient(135deg, rgb(243, 158, 47) 0%, rgb(243, 159, 48) 100%);
     transition: all 0.5s ease-in-out;
     transform-style: preserve-3d;
     box-shadow: rgba(5, 71, 17, 0) 40px 50px 25px -40px,
@@ -61,6 +62,7 @@ const Wrapper = styled.div`
     border-left: 1px solid white;
     border-bottom: 1px solid white;
     transition: all 0.5s ease-in-out;
+    padding-bottom: 30px;
   }
 
   .content {
@@ -86,6 +88,7 @@ const Wrapper = styled.div`
     transform: rotate3d(1, 1, 0, 30deg);
     box-shadow: rgba(5, 71, 17, 0.3) 30px 50px 25px -40px,
                 rgba(5, 71, 17, 0.1) 0px 25px 30px 0px;
+    
   }
 `;
 
