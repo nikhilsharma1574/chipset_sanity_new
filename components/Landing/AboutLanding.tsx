@@ -11,7 +11,7 @@ const aboutLanding = () => {
       <div className='p-6 md:text-4xl w-full font-bold text-xl lg:text-[50px] md:font-semibold md:px-24 md:py-12 font-heading'>
         <p className='leading-[70px]'>
           <p className='font-extralight'>
-            That's why <span data-aos="fade-right" className='font-extrabold'>CH<span className='text-[#f6a339]'>i</span>PSET</span> is more than just a name !!
+            That&apos;s why <span data-aos="fade-right" className='font-extrabold'>CH<span className='text-[#f6a339]'>i</span>PSET</span> is more than just a name !!
           </p>
           We are <FlipWords duration={300} className=' text-[#f6a339] font-extralight' words={["Better", "Unique", "Innovative", "Creative", "Collaborative", "Technical", "Advanced","Networking"]}/>,<br/>
         </p>
