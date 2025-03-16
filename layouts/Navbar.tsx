@@ -19,6 +19,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const LINKS = [
+    {label: "Renderscape registration",link:"https://www.texus.io/event/2504",ishighlighted:true},
     { label: "Home", link: "/" },
     { label: "About us", link: "/about" },
     { label: "Team", link: "/team" },
@@ -47,18 +48,22 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Navigation (Properly Aligned) */}
-        <div className="hidden lg:flex items-center space-x-3"> {/* ✅ Properly aligned */}
-          {LINKS.map((item, idx) => (
-            <Link
-              key={idx}
-              href={item.link}
-              className={`transition-all px-3 py-1 rounded-md text-[16px] ${
-                pathname === item.link ? "text-[#f39e2f]" : "text-black"
-              } hover:text-[#f39e2f] duration-300`}
-            >
-              {item.label}
-            </Link>
-          ))}
+        <div className="hidden lg:flex items-end space-x-1"> {/* ✅ Properly aligned */}
+        {LINKS.map((item, idx) => (
+  <Link
+    key={idx}
+    href={item.link}
+    className={`transition-all px-4 py-2 rounded-md text-[16px] font-medium ${
+      item.ishighlighted 
+        ? "bg-[#f39e2f] text-white hover:bg-[#d88a27]" // Button styling for highlighted link
+        : pathname === item.link 
+          ? "text-[#f39e2f]" 
+          : "text-black hover:text-[#f39e2f]"
+    } duration-300`}
+  >
+    {item.label}
+  </Link>
+))}
         </div>
 
         {/* Mobile Menu */}
