@@ -44,12 +44,14 @@ export const ParallaxScroll = ({
               key={"grid-1" + idx}
             >
               <Image
-                src={el}
-                className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
-                height="400"
-                width="400"
-                alt="thumbnail"
-              />
+  src={el}
+  className="w-full object-contain rounded-lg gap-10 !m-0 !p-0"
+  layout="intrinsic" // ✅ Automatically maintains aspect ratio
+  width={400} // Set width, height will be calculated
+  height={300} // Dummy value, actual height adjusts automatically
+  alt="thumbnail"
+/>
+
             </motion.div>
           ))}
         </div>
