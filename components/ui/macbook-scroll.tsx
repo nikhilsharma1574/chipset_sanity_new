@@ -186,7 +186,7 @@ export const Lid = ({
           className="md:hidden object-cover object-left-top absolute rounded-lg inset-0 h-full w-full"
         />
         <video className='object-contain hidden md:flex justify-center items-center bg-black absolute rounded-lg inset-0 h-full w-full' autoPlay muted loop>
-          <source src={"https://res.cloudinary.com/dzzvomj39/video/upload/v1714401007/Chipset_Intro_Year_2024_vbbz2d.mp4"} type="video/mp4"/>
+          <source src={"https://res.cloudinary.com/ddeqh8bh3/video/upload/v1696062328/ogaxbzjyfd0bhhjgm7xg.mp4"} type="video/mp4"/>
         </video>
       </motion.div>
     </div>
