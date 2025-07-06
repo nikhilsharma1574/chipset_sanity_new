@@ -93,9 +93,9 @@ Submit a pull request with a detailed description of your changes.
 Contact
 For any questions or inquiries, feel free to reach out to us:
 
-Email: chitset@srmramapuram.in
+Email: chipset@srmramapuram.in
 
-Website: Chitset Official Website
+Website: Chipsetsrm.vercel.app
 
 Social Media: Instagram | Twitter
 

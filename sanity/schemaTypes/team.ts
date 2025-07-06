@@ -41,9 +41,18 @@ export default defineType({
               title: 'Name',
             },
             {
-              type: 'string', // Add a new field for the role
+              type: 'string',
               name: 'role',
               title: 'Role',
+            },
+            {
+              type: 'url',
+              name: 'linkedin',
+              title: 'LinkedIn Profile',
+              validation: Rule => Rule.uri({
+                scheme: ['https'],
+                allowRelative: false
+              })
             },
           ],
         },

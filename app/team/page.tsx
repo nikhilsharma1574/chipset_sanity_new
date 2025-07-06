@@ -14,6 +14,7 @@ export type Members = {
     _key: string;
     name: string;
     role: string;
+    linkedin?: string
     image?: {
       _type: 'image';
       asset: {
