@@ -30,6 +30,7 @@ export type Members = {
 export default async function Team() {
   await new Promise((resolve) => setTimeout(resolve, 3000));
   const teamMembers = await sanityFetch<Members[]>({ query: teamQuery });
+  {teamMembers.map(member => console.log(member))}
 
   return (
     <>
@@ -61,6 +62,7 @@ export default async function Team() {
                         img={imageUrl || ''}
                         batch={team.title} 
                         role={member.role || ''}
+                        linkedin={member.linkedin || ''} 
                       />
                     );
                   })}
