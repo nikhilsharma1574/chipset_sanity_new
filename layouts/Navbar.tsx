@@ -48,6 +48,11 @@ const Navbar = () => {
            label:"Contact Us",
            link: "/contact"
          },
+         {
+            label:"Careers",
+            link: "/recruitment"
+         }
+
        ]
     return (
         <section id="" className="sticky top-0 z-40 bg-white-900 bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-60">
