@@ -1,35 +1,36 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-// Backend API URL - Azure deployed backend
-const BACKEND_URL = 'https://recruitment-fvbnapazb8d8bqgf.southindia-01.azurewebsites.net';
+// Google Apps Script Web App URL
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxddU_vHPshJTklz1ufSbvgSQcpDw7gpJt3u50k0xQZKrStikwQdFYM5n84JJI6Yraq/exec';
 
 export async function POST(request: NextRequest) {
   try {
     // Parse the request body
     const body = await request.json();
     
-    // Forward the request to your backend
-    const backendResponse = await fetch(`${BACKEND_URL}/api/recruitment`, {
+    // Forward the request to Google Apps Script Web App
+    const scriptResponse = await fetch(GOOGLE_SCRIPT_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(body)
+      body: JSON.stringify(body),
+      redirect: 'follow',
     });
 
-    const responseData = await backendResponse.json();
+    const responseData = await scriptResponse.json();
 
-    // Return the backend response with the same status code
-    return NextResponse.json(responseData, { 
-      status: backendResponse.status 
-    });
+    const status = !responseData.success && responseData.duplicate ? 409 : (scriptResponse.ok ? 200 : 500);
+
+    return NextResponse.json(responseData, { status });
 
   } catch (error) {
-    console.error('Frontend API Error:', error);
+    console.error('Recruitment API Error:', error);
     
     return NextResponse.json({
+      success: false,
       error: 'Failed to process recruitment application',
-      message: 'Please try again later'
+      message: error instanceof Error ? error.message : 'Please try again later'
     }, { status: 500 });
   }
 }
