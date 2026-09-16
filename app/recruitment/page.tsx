@@ -58,8 +58,7 @@ export default function Careers() {
     setSubmitError(null);
 
     try {
-      const defaultLinkedInURL = "https://linkedin.com/in/not-provided";
-      const defaultResumeLink = "https://drive.google.com/not-provided";
+      const notProvided = "Not provided";
       
       if (data.resumeLink && typeof data.resumeLink === 'string' && data.resumeLink.trim() !== "" && !data.resumeLink.includes("drive.google.com")) {
         setSubmitError("Please enter a valid Google Drive link for your resume.");
@@ -88,13 +87,13 @@ export default function Careers() {
         contactNo: data.contactNo,
         email: data.email,
         srmEmail: data.srmEmail,
-        linkedinProfile: (data.linkedinProfile && data.linkedinProfile.trim()) || defaultLinkedInURL,
-        githubProfile: (data.githubProfile && data.githubProfile.trim()) || "N/A",
-        otherLinks: (data.otherLinks && data.otherLinks.trim()) || "N/A",
+        linkedinProfile: (data.linkedinProfile && data.linkedinProfile.trim()) || notProvided,
+        githubProfile: (data.githubProfile && data.githubProfile.trim()) || notProvided,
+        otherLinks: (data.otherLinks && data.otherLinks.trim()) || notProvided,
         domain: data.domain,
         subdomain: data.domain === "non-technical" ? data.subdomain : "N/A",
         priorActivities: data.priorActivities,
-        resumeLink: (data.resumeLink && data.resumeLink.trim()) || defaultResumeLink
+        resumeLink: (data.resumeLink && data.resumeLink.trim()) || notProvided
       };
       
       let retries = 0;
@@ -129,7 +128,7 @@ export default function Careers() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       } else {
         if (result.duplicate || response.status === 409) {
-          throw new Error(result.error || "An application has already been submitted with this Registration Number or Email.");
+          throw new Error("Duplicate responses should not be submitted. An application with this Registration Number or Email already exists.");
         }
         throw new Error(result.error || result.message || "Failed to submit application");
       }
@@ -177,7 +176,6 @@ export default function Careers() {
           className="text-center mb-8"
         >
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-100 border border-orange-200 text-[#f39e2f] text-xs font-semibold tracking-wide uppercase mb-3 shadow-sm">
-            <span className="w-2 h-2 rounded-full bg-[#f39e2f] animate-pulse" />
             CHiPSET Recruitments 2026
           </div>
           
@@ -208,7 +206,7 @@ export default function Careers() {
                 Thank you for applying to join CHiPSET! Our team will review your application and contact you soon.
               </p>
 
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <div className="flex justify-center">
                 <a 
                   href="https://www.instagram.com/chipsetsrmrmp/" 
                   target="_blank" 
@@ -217,13 +215,6 @@ export default function Careers() {
                 >
                   <Instagram className="w-4 h-4" /> Follow on Instagram
                 </a>
-                <button
-                  type="button"
-                  onClick={() => setSubmitted(false)}
-                  className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-semibold transition-colors border border-slate-300"
-                >
-                  Submit Another
-                </button>
               </div>
             </motion.div>
           )}
@@ -487,8 +478,8 @@ export default function Careers() {
                       className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 placeholder:text-slate-400 focus:bg-white focus:border-[#f39e2f] focus:ring-2 focus:ring-[#f39e2f]/20 focus:outline-none transition-all text-sm" 
                     />
                   </div>
-                  <p className="text-[11px] text-amber-600 font-medium mt-1 flex items-center gap-1">
-                    ✨ <span>Providing LinkedIn increases your chances of selection</span>
+                  <p className="text-[11px] text-amber-600 font-medium mt-1">
+                    Providing LinkedIn increases your chances of selection
                   </p>
                   {errors.linkedinProfile && <p className="text-red-500 text-xs mt-1">{errors.linkedinProfile.message}</p>}
                 </div>
@@ -508,8 +499,8 @@ export default function Careers() {
                     />
                   </div>
                   {selectedDomain === "technical" && (
-                    <p className="text-[11px] text-amber-600 font-medium mt-1 flex items-center gap-1">
-                      ✨ <span>Providing GitHub increases your chances of selection</span>
+                    <p className="text-[11px] text-amber-600 font-medium mt-1">
+                      Providing GitHub increases your chances of selection
                     </p>
                   )}
                   {errors.githubProfile && <p className="text-red-500 text-xs mt-1">{errors.githubProfile.message}</p>}
@@ -578,8 +569,8 @@ export default function Careers() {
                   />
                 </div>
                 {selectedYear === "2" && (
-                  <p className="text-[11px] text-amber-600 font-medium mt-1 flex items-center gap-1">
-                    ✨ <span>Providing a resume increases your chances of selection significantly</span>
+                  <p className="text-[11px] text-amber-600 font-medium mt-1">
+                    Providing a resume increases your chances of selection significantly
                   </p>
                 )}
                 {errors.resumeLink && <p className="text-red-500 text-xs mt-1">{errors.resumeLink.message}</p>}
@@ -624,7 +615,7 @@ export default function Careers() {
                     @chipsetsrmrmp
                     <ExternalLink className="w-3 h-3" />
                   </a>{" "}
-                  Instagram handle. 📲
+                  Instagram handle.
                 </span>
               </label>
               {errors.instagramFollow && <p className="text-red-500 text-xs mt-1">{errors.instagramFollow.message}</p>}
