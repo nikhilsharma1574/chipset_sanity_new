@@ -462,8 +462,8 @@ export default function Careers() {
                           className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:bg-white focus:border-[#f39e2f] focus:ring-2 focus:ring-[#f39e2f]/20 focus:outline-none transition-all text-sm cursor-pointer"
                         >
                           <option value="">Select subdomain</option>
-                          <option value="designing">Designing (UI/UX & Graphics)</option>
-                          <option value="video-editing">Video Editing & Motion</option>
+                          <option value="designing">Design</option>
+                          <option value="video-editing">Video Editing</option>
                           <option value="content-writing">Content Writing</option>
                           <option value="pr-marketing">PR & Marketing</option>
                         </select>
