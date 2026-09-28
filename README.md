@@ -81,6 +81,9 @@ For more details, check out the Next.js Deployment Documentation.
 
 check out new cgpa calcultor : https://www.chipsetsrm.live/tools/cgpa-calculator
 
+check out new attendance calculator:
+ https://www.chipsetsrm.live/tools/attendance-calculator
+
 Contributing
 We welcome contributions from the community! If you'd like to contribute to the Chitset project, please follow these steps:
 

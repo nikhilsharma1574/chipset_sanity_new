@@ -4,6 +4,7 @@ interface Notice {
   _id: string;
   title: string;
   desc: string;
+  link?: string;
   attachmentURL: string;
 }
 
@@ -33,7 +34,12 @@ const TableList: React.FC<TableListProps> = ({ notices }) => {
             {notice.title}
           </th>
           <td className="px-6 py-3 cursor-pointer hover:text-[#f6a339]">
-            <Link href={notice.attachmentURL} className='text-[#f39e2f]'>
+            <Link
+              href={notice.link || notice.attachmentURL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className='text-[#f39e2f]'
+            >
                 Open
             </Link>
           </td>
